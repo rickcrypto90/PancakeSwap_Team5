@@ -1,0 +1,75 @@
+$mainPurple : rgb(154, 106, 255);
+$buttonBlue :  rgb(31, 199, 212);
+$orangeVarious: rgb(255, 178, 55);
+$fontFamily: "Kanit";
+$fontLightWeight : 400;
+$fontHeavyWeight : 600;
+
+@mixin DivColorShow($color) {
+    height: convertpx(100px);
+    width: convertpx(100px);
+    border-radius: 100%;
+    background-color: $color ;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+@function convertpx($pxinput){
+    @return calc($pxinput / 16px) + rem;
+}
+@mixin button {
+    align-items: center;
+    border: 0px;
+    border-radius: convertpx(16px);
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: convertpx(16px);
+    font-weight: $fontHeavyWeight;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: convertpx(48px);
+    padding: 0px convertpx(24px);
+    background-color: $buttonBlue;
+    color: white;
+    margin-right: convertpx(8px);
+}
+@mixin card {
+    width: convertpx(300px);
+    height: convertpx(150px);
+    overflow: inherit;
+    background: rgb(39, 38, 44);
+    border-radius: convertpx(24px);
+}
+@mixin cardNewestArrivals {
+    @include card;
+    height: convertpx(24px);
+    width: convertpx(302px);
+    line-height: convertpx(24px);
+
+}
+@mixin cardNFT {
+    @include card;
+    border-bottom-left-radius: 30%;
+}
+
+.card {
+    @include card;
+    @include cardNFT;
+}
+
+.purple {
+    @include DivColorShow($mainPurple);
+}

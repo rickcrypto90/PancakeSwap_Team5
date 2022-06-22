@@ -1,13 +1,14 @@
 $mainPurple : #9a6aff;
 $buttonBlue :  #1fc7d4;
 $orangeVarious: #ffb237;
+$mainBlack : #27262c;
 $fontFamily: "Kanit";
 $fontLightWeight : 400;
 $fontHeavyWeight : 600;
 
 @mixin DivColorShow($color) {
-    height: convertpx(60px);
-    width: convertpx(60px);
+    height: convertpx(40px);
+    width: convertpx(40px);
     border-radius: 100%;
     background-color: $color ;
 }
@@ -97,19 +98,23 @@ body {
                     >div{
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
-                            pre{
+                        justify-content: flex-start;
+                            
+                            p{
                                 margin: 0%;
-                                text-align: left;
-                                margin-right: auto;
-
-                                >span{
+                                font-size: convertpx(14px);
+                                font-family: $fontFamily;
+                                font-weight: $fontHeavyWeight;
+                                span{
+                                    font-size: convertpx(13px);
                                     color: gray;
+                                    font-size: $fontLightWeight;
                                 }
                             }
 
                             div.purple{
-                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);                               @include DivColorShow($mainPurple);
+                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);                               
+                                @include DivColorShow($mainPurple);
                             }
                             div.blue{
                                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
@@ -118,6 +123,11 @@ body {
                             div.orange{
                                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
                                 @include DivColorShow($orangeVarious);
+                            }
+                            div.black{
+                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                                @include DivColorShow($mainBlack);
+
                             }
                     }
 

@@ -1,24 +1,15 @@
-$mainPurple : rgb(154, 106, 255);
-$buttonBlue :  rgb(31, 199, 212);
-$orangeVarious: rgb(255, 178, 55);
+$mainPurple : #9a6aff;
+$buttonBlue :  #1fc7d4;
+$orangeVarious: #ffb237;
 $fontFamily: "Kanit";
 $fontLightWeight : 400;
 $fontHeavyWeight : 600;
 
 @mixin DivColorShow($color) {
-    height: convertpx(100px);
-    width: convertpx(100px);
+    height: convertpx(60px);
+    width: convertpx(60px);
     border-radius: 100%;
     background-color: $color ;
-}
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
 }
 
 @function convertpx($pxinput){
@@ -70,6 +61,72 @@ body {
     @include cardNFT;
 }
 
-.purple {
-    @include DivColorShow($mainPurple);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: convertpx(20px);
+    background-color: lightblue;
+
+        aside{
+            background-color: white;
+            width: convertpx(420px);
+            height: convertpx(250px);
+
+            &.first{
+
+               div.color{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+
+                    >p{
+                        align-self: center;
+                        font-weight: bold;
+                    }
+
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                            pre{
+                                margin: 0%;
+                                text-align: left;
+                                margin-right: auto;
+
+                                >span{
+                                    color: gray;
+                                }
+                            }
+
+                            div.purple{
+                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);                               @include DivColorShow($mainPurple);
+                            }
+                            div.blue{
+                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                                @include DivColorShow($buttonBlue);
+                            }
+                            div.orange{
+                                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                                @include DivColorShow($orangeVarious);
+                            }
+                    }
+
+               }
+
+            }
+
+            &.third{
+                height: convertpx(520px);
+            }
+        }
 }

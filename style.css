@@ -88,4 +88,23 @@ body aside.third {
   height: 32.5rem;
 }
 
+/*Inizio parte Icons -- Massimo Caser --*/
+aside.third div.icon {
+  margin: 0 1rem;
+}
+aside.third div.icon > p {
+  text-align: center;
+  font-weight: bold;
+}
+aside.third div.container-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+aside.third path.color-svg {
+  fill: red;
+}
+
+/*Fine parte Icons -- Massimo Caser --*/
+
 /*# sourceMappingURL=style.css.map */

@@ -140,3 +140,28 @@ body {
             }
         }
 }
+
+/*Inizio parte Icons -- Massimo Caser --*/
+
+aside {
+    &.third {
+        div.icon {
+            margin: 0 1rem;
+            
+            >p{
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        div.container-icons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        path.color-svg {
+            fill: red;
+        }
+    }
+}
+
+/*Fine parte Icons -- Massimo Caser --*/

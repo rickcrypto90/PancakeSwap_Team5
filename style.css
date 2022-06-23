@@ -43,36 +43,46 @@ body aside.first div.color > p {
 body aside.first div.color > div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-body aside.first div.color > div pre {
+body aside.first div.color > div p {
   margin: 0%;
-  text-align: left;
-  margin-right: auto;
+  font-size: 0.875rem;
+  font-family: "Kanit";
+  font-weight: 600;
 }
-body aside.first div.color > div pre > span {
+body aside.first div.color > div p span {
+  font-size: 0.8125rem;
   color: gray;
+  font-size: 400;
 }
 body aside.first div.color > div div.purple {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
-  height: 3.75rem;
-  width: 3.75rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 100%;
   background-color: #9a6aff;
 }
 body aside.first div.color > div div.blue {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
-  height: 3.75rem;
-  width: 3.75rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 100%;
   background-color: #1fc7d4;
 }
 body aside.first div.color > div div.orange {
   margin: 0 0.3125rem 0.1875rem 0.1875rem;
-  height: 3.75rem;
-  width: 3.75rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 100%;
   background-color: #ffb237;
+}
+body aside.first div.color > div div.black {
+  margin: 0 0.3125rem 0.1875rem 0.1875rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  background-color: #27262c;
 }
 body aside.third {
   height: 32.5rem;

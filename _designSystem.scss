@@ -140,6 +140,28 @@ body {
             }
         }
 }
+/*Inizio parte typography - Cecilia*/
+aside.second {
+    padding: 16px;
+    padding-top:0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:space-between;
+    gap:20px;
+    .title {
+        font-family: Kanit;
+    }
+    .subtitle {
+        font-family: Kanit;
+    }
+    .description {
+        font-family: Kanit;
+    }
+    .body {
+        font-family: Kanit;
+    }
+}
 
 /*Inizio parte Icons -- Massimo Caser --*/
 
@@ -237,3 +259,4 @@ aside.third{
 
         }
 }
+

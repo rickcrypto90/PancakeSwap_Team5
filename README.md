@@ -1,8 +1,8 @@
-Team project - Develhope Coding School - Team 5\
+Team project - Develhope Coding School - Team 5 \
 
-Riproduzione del sito web PancakeSwap\
+Riproduzione del sito web PancakeSwap \
 
-Membri del team:\
+Membri del team: \
 
 Francesco Acciarino\
 Fabio Aranzulla\
@@ -13,6 +13,6 @@ Riccardo Pirrello\
 Alessio Valdarchi\
 RULES\ 
 
--- nomenclatura per i branch della repo ---> es: feature/header , feature/main , feature/aside , feature/nav\
+-- nomenclatura per i branch della repo ---> es: feature/header , feature/main , feature/aside , feature/nav \ 
 
 -- nomenclatura per i commit ---> conventionalcommits.org

@@ -1,8 +1,5 @@
-$mainPurple : #9a6aff;
-$buttonBlue : #1fc7d4;
-$orangeVarious: #ffb237;
-$mainBlack : #27262c;
-$pinkColor: #ed4b9e;
+@use 'colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
 $fontFamily: "Kanit";
 $fontLightWeight : 400;
 $fontHeavyWeight : 600;
@@ -53,7 +50,7 @@ $fontSizeCardBottom: convertpx(12px);
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
     height: convertpx(48px);
     padding: 0px convertpx(24px);
-    background-color: $buttonBlue;
+    background-color: color.$buttonBlue;
     color: white;
     margin-right: convertpx(8px);
 }
@@ -210,22 +207,22 @@ body {
             div.purple {
                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
 
-                @include DivColorShow($mainPurple);
+                @include DivColorShow(color.$mainPurple);
             }
 
             div.blue {
                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
-                @include DivColorShow($buttonBlue);
+                @include DivColorShow(color.$buttonBlue);
             }
 
             div.orange {
                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
-                @include DivColorShow($orangeVarious);
+                @include DivColorShow(color.$orangeVarious);
             }
 
             div.black {
                 margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
-                @include DivColorShow($mainBlack);
+                @include DivColorShow(color.$mainBlack);
 
             }
         }
@@ -281,8 +278,8 @@ aside.third {
 
                 &.transparent-button {
                     background-color: transparent;
-                    color: $buttonBlue;
-                    border: 3px solid $buttonBlue;
+                    color: color.$buttonBlue;
+                    border: 3px solid color.$buttonBlue;
                     box-shadow: none;
                 }
 
@@ -331,7 +328,7 @@ aside.third {
             h2:first-of-type {
                 border-bottom: none;
                 font-size: convertpx(30px);
-                color: $mainPurple
+                color: color.$mainPurple
             }
 
             h2:last-of-type {
@@ -530,7 +527,7 @@ input:invalid,
                 height: inherit;
                border: none;
                 svg {
-                    fill: $buttonBlue;
+                    fill: color.$buttonBlue;
                 }
             }
                 &>div:first-of-type>div, &>div:nth-of-type(2)>div {
@@ -556,7 +553,7 @@ input:invalid,
                     background-repeat: no-repeat;
                     padding: 5px 10px 0 5px;
                     vertical-align: -50%;
-                    fill: $buttonBlue;
+                    fill: color.$buttonBlue;
                 }
 
                 &>div:last-of-type {
@@ -567,11 +564,11 @@ input:invalid,
                     align-items: flex-start;
 
                     &>p:first-of-type {
-                        color: $mainPurple
+                        color: color.$mainPurple
                     }
 
                     &>p:last-of-type {
-                        color: $buttonBlue;
+                        color: color.$buttonBlue;
                         font-weight: $fontHeavyWeight;
                     }
                 }

@@ -6,13 +6,12 @@ Membri del team:
 
 Francesco Acciarino\
 Fabio Aranzulla\
-Massimo Caser\
 Cecilia Fabiole\
 Giuseppe Frisella\
 Riccardo Pirrello\
 Alessio Valdarchi\
-RULES\ 
+RULES
 
--- nomenclatura per i branch della repo ---> es: feature/header , feature/main , feature/aside , feature/nav 
+-- nomenclatura per i branch della repo ---> es: feat/Sezione_1
 
 -- nomenclatura per i commit ---> conventionalcommits.org

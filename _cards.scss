@@ -1,0 +1,22 @@
+@mixin card {
+    width: convertpx(300px);
+    height: convertpx(150px);
+    overflow: inherit;
+    background: rgb(39, 38, 44);
+    border-radius: convertpx(24px);
+}
+
+@mixin cardNewestArrivals {
+    @include card;
+    height: convertpx(24px);
+    width: convertpx(302px);
+    line-height: convertpx(24px);
+
+}
+
+@mixin cardNFT {
+    @include card;
+    border-radius: 8px 8px 8px 56px;
+    transition: opacity 200ms ease 0s;
+    width: convertpx(270px);
+}

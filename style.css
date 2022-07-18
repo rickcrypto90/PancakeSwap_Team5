@@ -1,0 +1,21 @@
+#main-img {
+  position: relative;
+  z-index: 1;
+}
+
+#top-left {
+  position: absolute;
+  top: 110px;
+  left: -5px;
+  z-index: 2;
+}
+
+.imgBounce {
+  width: 400px;
+  position: relative;
+  display: block;
+  left: 50%;
+  z-index: -1;
+  overflow: visible;
+  transform: translate(-50%, 0%);
+}

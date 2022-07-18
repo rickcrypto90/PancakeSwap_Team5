@@ -1,10 +1,6 @@
 @use 'colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+@use 'fontModule' as font; //importo il modulo dei fonts
 
-$fontFamily: "Kanit";
-$fontLightWeight : 400;
-$fontHeavyWeight : 600;
-$fontSizeCardTitle: convertpx(20px);
-$fontSizeCardBottom: convertpx(12px);
 
 @mixin DivColorShow($color) {
     min-height: convertpx(40px);
@@ -41,7 +37,7 @@ $fontSizeCardBottom: convertpx(12px);
     display: inline-flex;
     font-family: inherit;
     font-size: convertpx(16px);
-    font-weight: $fontHeavyWeight;
+    font-weight: font.$fontHeavyWeight;
     justify-content: center;
     letter-spacing: 0.03em;
     line-height: 1;
@@ -98,7 +94,7 @@ $fontSizeCardBottom: convertpx(12px);
     }
 
     small {
-        font-weight: $fontHeavyWeight;
+        font-weight: font.$fontHeavyWeight;
         color: gray;
     }
 }
@@ -194,13 +190,13 @@ body {
             p {
                 margin: 0%;
                 font-size: convertpx(14px);
-                font-family: $fontFamily;
-                font-weight: $fontHeavyWeight;
+                font-family: font.$fontFamily;
+                font-weight: font.$fontHeavyWeight;
 
                 span {
                     font-size: convertpx(13px);
                     color: gray;
-                    font-size: $fontLightWeight;
+                    font-size: font.$fontLightWeight;
                 }
             }
 
@@ -254,8 +250,8 @@ aside.third {
         }
 
         div {
-            font-family: $fontFamily;
-            font-weight: $fontLightWeight;
+            font-family: font.$fontFamily;
+            font-weight: font.$fontLightWeight;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -569,7 +565,7 @@ input:invalid,
 
                     &>p:last-of-type {
                         color: color.$buttonBlue;
-                        font-weight: $fontHeavyWeight;
+                        font-weight: font.$fontHeavyWeight;
                     }
                 }
 

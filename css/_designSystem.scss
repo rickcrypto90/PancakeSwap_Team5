@@ -1,14 +1,17 @@
 @use 'colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
 
-$fontFamily: "Kanit";
-$fontLightWeight : 400;
-$fontHeavyWeight : 600;
-$fontSizeCardTitle: convertpx(20px);
-$fontSizeCardBottom: convertpx(12px);
+@use 'fontModule' as font; //importo il modulo dei fonts
+
+@use 'functionModule' as function;
+
+@use 'inputModule' as input;
+
+@use 'buttons' as buttons;
+
 
 @mixin DivColorShow($color) {
-    min-height: convertpx(40px);
-    min-width: convertpx(40px);
+    min-height: function.convertpx(40px);
+    min-width: function.convertpx(40px);
     background-color: $color;
 }
 
@@ -16,67 +19,7 @@ $fontSizeCardBottom: convertpx(12px);
     @return calc($pxinput / 16px)+rem;
 }
 
-@mixin input {
 
-    background-color: rgb(55, 47, 71);
-    border-radius: 16px;
-    box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
-    color: rgb(244, 238, 255);
-    display: block;
-    font-size: 16px;
-    height: 40px;
-    outline: 0px;
-    padding: 0px 16px;
-    width: 100%;
-    border: 1px solid rgb(38, 33, 48);
-}
-
-@mixin button {
-
-    align-items: center;
-    border: 0px;
-    border-radius: convertpx(16px);
-    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: inherit;
-    font-size: convertpx(16px);
-    font-weight: $fontHeavyWeight;
-    justify-content: center;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    opacity: 1;
-    outline: 0px;
-    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-    height: convertpx(48px);
-    padding: 0px convertpx(24px);
-    background-color: color.$buttonBlue;
-    color: white;
-    margin-right: convertpx(8px);
-}
-
-@mixin card {
-    width: convertpx(300px);
-    height: convertpx(150px);
-    overflow: inherit;
-    background: rgb(39, 38, 44);
-    border-radius: convertpx(24px);
-}
-
-@mixin cardNewestArrivals {
-    @include card;
-    height: convertpx(24px);
-    width: convertpx(302px);
-    line-height: convertpx(24px);
-
-}
-
-@mixin cardNFT {
-    @include card;
-    border-radius: 8px 8px 8px 56px;
-    transition: opacity 200ms ease 0s;
-    width: convertpx(270px);
-}
 
 .card {
     @include card;
@@ -92,13 +35,13 @@ $fontSizeCardBottom: convertpx(12px);
     h2 {
         border-bottom: 2px solid rgb(68, 132, 158);
         width: fit-content;
-        letter-spacing: convertpx(.5px);
+        letter-spacing: function.convertpx(.5px);
         align-self: start;
         color: rgb(244, 238, 255);
     }
 
     small {
-        font-weight: $fontHeavyWeight;
+        font-weight: font.$fontHeavyWeight;
         color: gray;
     }
 }
@@ -110,7 +53,7 @@ body {
     flex-flow: row wrap;
     gap: 1.25rem;
     background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
-    min-width: convertpx(1200px);
+    min-width: function.convertpx(1200px);
 
     & div {
         flex: 1;
@@ -119,9 +62,9 @@ body {
         aside {
             background: rgba(138, 126, 155, 0.359);
             width: 100%;
-            height: convertpx(300px);
+            height: function.convertpx(300px);
             margin: 1rem;
-            padding: convertpx(8px);
+            padding: function.convertpx(8px);
             border-radius: 1%;
         }
     }
@@ -152,7 +95,7 @@ body {
             align-items: center;
 
             h4 {
-                margin: convertpx(5px) 0;
+                margin: function.convertpx(5px) 0;
             }
         }
 
@@ -180,8 +123,8 @@ body {
 
         >p {
             font-weight: bold;
-            font-size: convertpx(20px);
-            margin-bottom: convertpx(5px);
+            font-size: function.convertpx(20px);
+            margin-bottom: function.convertpx(5px);
 
         }
 
@@ -193,35 +136,36 @@ body {
 
             p {
                 margin: 0%;
-                font-size: convertpx(14px);
-                font-family: $fontFamily;
-                font-weight: $fontHeavyWeight;
+                font-size: function.convertpx(14px);
+                font-family: font.$fontFamily;
+                font-weight: font.$fontHeavyWeight;
+
 
                 span {
-                    font-size: convertpx(13px);
+                    font-size: function.convertpx(13px);
                     color: gray;
-                    font-size: $fontLightWeight;
+                    font-size: font.$fontLightWeight;
                 }
             }
 
             div.purple {
-                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                margin: 0 function.convertpx(5px) function.convertpx(3px) function.convertpx(3px);
 
                 @include DivColorShow(color.$mainPurple);
             }
 
             div.blue {
-                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                margin: 0 function.convertpx(5px) function.convertpx(3px) function.convertpx(3px);
                 @include DivColorShow(color.$buttonBlue);
             }
 
             div.orange {
-                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                margin: 0 function.convertpx(5px) function.convertpx(3px) function.convertpx(3px);
                 @include DivColorShow(color.$orangeVarious);
             }
 
             div.black {
-                margin: 0 convertpx(5px) convertpx(3px) convertpx(3px);
+                margin: 0 function.convertpx(5px) function.convertpx(3px) function.convertpx(3px);
                 @include DivColorShow(color.$mainBlack);
 
             }
@@ -235,7 +179,7 @@ aside.third {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: convertpx(10px);
+    gap: function.convertpx(10px);
     min-width: fit-content;
 
     div.buttons {
@@ -243,26 +187,26 @@ aside.third {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        max-width: convertpx(400px);
+        max-width: function.convertpx(400px);
 
         p {
             width: 100%;
             text-align: center;
             font-weight: bold;
             color: grey;
-            margin-top: convertpx(20px);
+            margin-top: function.convertpx(20px);
         }
 
         div {
-            font-family: $fontFamily;
-            font-weight: $fontLightWeight;
+            font-family: font.$fontFamily;
+            font-weight: font.$fontLightWeight;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
 
             button {
-                @include button;
-                width: convertpx(150px);
+                @include buttons.button;
+                width: function.convertpx(150px);
 
                 &.arrow-bluebutton-white img {
                     filter: brightness(0) invert(1);
@@ -291,7 +235,7 @@ aside.third {
             }
 
             p {
-                margin-top: convertpx(10px);
+                margin-top: function.convertpx(10px);
                 border: none;
                 padding: 0;
             }
@@ -312,14 +256,14 @@ aside.third {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        column-gap: convertpx(100px);
+        column-gap: function.convertpx(100px);
 
         &>div {
             flex: 1;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-around;
-            height: convertpx(100px);
+            height: function.convertpx(100px);
             border-bottom: 2px solid lightgray;
 
         }
@@ -327,13 +271,13 @@ aside.third {
         &>div.title {
             h2:first-of-type {
                 border-bottom: none;
-                font-size: convertpx(30px);
+                font-size: function.convertpx(30px);
                 color: color.$mainPurple
             }
 
             h2:last-of-type {
                 border-bottom: none;
-                font-size: convertpx(30px);
+                font-size: function.convertpx(30px);
 
             }
         }
@@ -466,19 +410,19 @@ input:invalid,
    flex-flow: column nowrap;
     background: rgba(138, 126, 155, 0.359);
     margin: 1rem;
-    padding: convertpx(8px);
+    padding: function.convertpx(8px);
     border-radius: 1%;
 
     >.showComponents {
         margin-top: 1rem;
         display: flex;
         flex-flow: column no;
-        gap: convertpx(10px);
+        gap: function.convertpx(10px);
         .nftcard { @include cardNewestArrivals;}
         .swap {
             @include card;
-            width: convertpx(328px);
-            height: convertpx(518px);
+            width: function.convertpx(328px);
+            height: function.convertpx(518px);
             display: flex;
             flex-flow: column nowrap;
             padding: 1rem;
@@ -569,20 +513,20 @@ input:invalid,
 
                     &>p:last-of-type {
                         color: color.$buttonBlue;
-                        font-weight: $fontHeavyWeight;
+                        font-weight: font.$fontHeavyWeight;
                     }
                 }
 
                 >button:last-of-type {
-                    @include button;
+                    @include buttons.button;
                     width: 100%
                 }
 
                 input {
-                    @include input;
-                    height: convertpx(60px);
-                    width: convertpx(262px);
-                    margin-top: convertpx(10px);
+                    @include input.input;
+                    height: function.convertpx(60px);
+                    width: function.convertpx(262px);
+                    margin-top: function.convertpx(10px);
                 }
             }
         }
@@ -599,7 +543,7 @@ input:invalid,
             &>img {
                 border: 5px solid white;
                 object-fit: contain;
-                width: convertpx(96px);
+                width: function.convertpx(96px);
                 aspect-ratio: 1 / 1;
                 border-radius: 100%;
 

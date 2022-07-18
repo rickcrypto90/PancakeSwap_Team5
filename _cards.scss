@@ -1,3 +1,5 @@
+@use 'functionModule' as function;
+
 @mixin card {
     width: convertpx(300px);
     height: convertpx(150px);

@@ -1,0 +1,124 @@
+@use './css/colorsModule' as color;
+@use './css/functionModule' as function;
+@use './css/fontModule' as font;
+@use './css/buttons' as button;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font.$fontFamily;
+}
+
+.sezione6 {
+
+    width: function.convertpx(1278);
+    height: function.convertpx(750);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: color.$mainBlack;
+}
+
+.blocco1flex {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 2;
+
+    .textblocco1 {
+        color: #f4eeff;
+        font-size: function.convertpx(40);
+
+        span {
+            color: #9a6aff;
+        }
+
+        .paragrafo {
+            font-size: function.convertpx(16);
+            color: #b8a2dd;
+            padding-top: 20px;
+        }
+
+        .bottone-learn {
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            button {
+                padding-top: 15px;
+                border-radius: 16px;
+                background-color: #1fc7d4;
+                color: #ffffff;
+                height: 100%;
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                opacity: 1;
+                letter-spacing: 0.03em;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding-bottom: 12px;
+                }
+
+
+            }
+
+            #learn {
+                font-size: 16px;
+                color: #1fc7d4;
+                text-decoration: none;
+                padding-left: 10px;
+            }
+        }
+    }
+
+
+}
+
+
+.blocco2grid {
+    padding-left: 100px; //sistemare
+    padding-right: 150px;
+    flex: 1;
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "quadro1, quadro2, quadro3"
+        "quadro4, quadro5, quadro6";
+
+    p {
+        font-size: 16px;
+        color: #b8a2dd;
+    }
+
+    h5 {
+        font-size: 24px;
+        color: #f4eeff;
+    }
+
+}
+
+.imgBounce {
+    width: 100%;
+    position: relative;
+
+    #main-img {
+        z-index: 1;
+        position: absolute;
+    }
+
+    #top-left {
+        z-index: 2;
+        position: absolute;
+        top: 10px;
+        right: 100px;
+    }
+}

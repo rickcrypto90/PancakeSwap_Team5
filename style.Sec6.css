@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit";
+}
+
+.sezione6 {
+  width: 79.875rem;
+  height: 46.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #27262c;
+}
+
+.blocco1flex {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 2;
+}
+.blocco1flex .textblocco1 {
+  color: #f4eeff;
+  font-size: 2.5rem;
+}
+.blocco1flex .textblocco1 span {
+  color: #9a6aff;
+}
+.blocco1flex .textblocco1 .paragrafo {
+  font-size: 1rem;
+  color: #b8a2dd;
+  padding-top: 20px;
+}
+.blocco1flex .textblocco1 .bottone-learn {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.blocco1flex .textblocco1 .bottone-learn button {
+  padding-top: 15px;
+  border-radius: 16px;
+  background-color: #1fc7d4;
+  color: #ffffff;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  opacity: 1;
+  letter-spacing: 0.03em;
+}
+.blocco1flex .textblocco1 .bottone-learn button p {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+.blocco1flex .textblocco1 .bottone-learn #learn {
+  font-size: 16px;
+  color: #1fc7d4;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.blocco2grid {
+  padding-left: 100px;
+  padding-right: 150px;
+  flex: 1;
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas: "quadro1, quadro2, quadro3" "quadro4, quadro5, quadro6";
+}
+.blocco2grid p {
+  font-size: 16px;
+  color: #b8a2dd;
+}
+.blocco2grid h5 {
+  font-size: 24px;
+  color: #f4eeff;
+}
+
+.imgBounce {
+  width: 100%;
+  position: relative;
+}
+.imgBounce #main-img {
+  z-index: 1;
+  position: absolute;
+}
+.imgBounce #top-left {
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+/*# sourceMappingURL=style.Sec6.css.map */

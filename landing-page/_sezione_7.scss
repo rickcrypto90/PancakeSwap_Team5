@@ -1,0 +1,397 @@
+@use '../css/colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
+@use '../css/fontModule' as font; //importo il modulo dei fonts
+
+@use '../css/functionModule' as function;
+
+@use '../css/inputModule' as input;
+
+@use '../css/buttons' as buttons;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font.$fontFamily, sans-serif;
+}
+
+
+body{
+    section{
+        &.sectionSeven{
+            background-color: #6f3db1;
+            // background-color: color.$mainPurple;
+            background-image: url(../assets-section7/background.svg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: function.convertpx(428px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: hidden;
+                //start image handling
+                div {
+                    &.sectionSeven-leftDiv, &.sectionSeven-rightDiv{
+                        width: function.convertpx(256px);
+                        height: function.convertpx(256px);
+
+                    }
+                    &.sectionSeven-leftDiv{
+                        align-self: flex-start;
+
+                        img[srcset*=topPancake]{
+                            top: function.convertpx(-20px)
+                        }
+                    }
+                    &.sectionSeven-rightDiv{
+                        align-self: flex-end;
+
+                        img[srcset*=topPancake]{
+                        transform: rotate(80deg);
+                        top: function.convertpx(-50px);
+                        right: function.convertpx(100px);
+                        }
+
+                        img[srcset*=midPancake]{
+                            transform: rotate(-120deg);
+                            left: function.convertpx(40px);
+                            width: function.convertpx(230px);
+                            height: function.convertpx(260px);
+                        }
+                        
+                        img[srcset*=bottomPancake]{
+                            transform: rotate(-60deg);
+                            top: function.convertpx(50px);
+                            right: function.convertpx(140px);
+                        }
+                    }
+                    
+                    div{
+                        &.topPancake, &.midPancake, &.bottomPancake{
+                            position: relative;
+                            picture{
+
+                                img{
+                                    position: absolute;
+                                    width: function.convertpx(256px);
+                                    height: function.convertpx(256px);
+                                    overflow: hidden;
+                                }
+
+
+                            }
+                        }
+                    }
+
+                }  //end images handling
+             
+                
+                //start section 7 mid text handling
+                div.sectionSeven-centralDiv{
+                    height: 100%;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    gap: function.convertpx(20px);
+                    text-align: center;
+
+                    h2{
+                        color: white;
+                        font-weight: font.$fontHeavyWeight;
+                        font-size: function.convertpx(40px);
+                        font-family: font.$fontFamily, sans-serif;
+                        margin-bottom: function.convertpx(5px);
+                    
+                    }
+
+                    p{
+                        color: white;
+                        font-weight: font.$fontLightWeight;
+                        font-size: function.convertpx(16px);
+                        font-family: font.$fontFamily, sans-serif;
+
+                        span{
+                            line-height: 2;
+                            font-weight: font.$fontHeavyWeight;
+                            font-family: font.$fontFamily, sans-serif;
+                        }
+                    }
+
+                    div:nth-child(3){
+                        a{
+                            text-decoration: none;
+                            color: color.$buttonBlue;
+                            font-family: font.$fontFamily, sans-serif;
+                            font-weight: font.$fontHeavyWeight;
+
+                            &:hover{
+                                text-decoration: underline
+                            }
+                        }
+                    }
+                    button{
+                        @include buttons.button;
+                        background-color: color.$buttonBlue;
+                        a{
+                            text-decoration: none;
+                            color: inherit;
+                        }
+                    }
+                } //end section 7 mid handling
+            }
+    }
+
+    footer{ //start footer handling
+        background-color: color.$mainBlack;
+        display: flex;
+        justify-content: center;
+        height: function.convertpx(500px);
+        width: 100%;
+        div.footerContainer{
+        width: function.convertpx(1200px);
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        div{
+
+            &.topFooter{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                div{
+
+                    &.topFooterSon{
+                        margin-right: function.convertpx(35px);
+                        margin-top: function.convertpx(20px);
+                        ul{
+                            display: flex;
+                            flex-flow: column;
+                            gap: function.convertpx(9px);
+                            letter-spacing: .5px;
+                            li:first-child{
+                                color: color.$mainPurple;
+                                font-family: font.$fontFamily, sans-serif;
+                                font-weight: font.$fontHeavyWeight;
+                                line-height: 1.5;
+                            }
+
+                            li{
+                                list-style-type: none;
+                                transform: scale(.9, .9);
+                                &:not(:first-child){
+                                    a{
+                                    color: #F4EEFF;
+                                    font-family: font.$fontFamily, sans-serif;
+                                    font-weight: font.$fontHeavyWeight;
+                                    line-height: 1.5;
+                                    cursor: pointer;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                    }
+                                    span{
+                                        color: #F4EEFF;
+                                        font-family: font.$fontFamily, sans-serif;
+                                        font-weight: font.$fontHeavyWeight;
+                                        line-height: 1.5;
+                                    }
+                                }
+                                a{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+
+                        img{
+                            width: function.convertpx(160px);
+                            height: function.convertpx(25px);
+                        }
+
+                        &:first-child{
+                            ul{
+                                li:nth-child(2){
+                                    a{
+                                    color: color.$orangeVarious;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &.midFooter{
+                display: flex;
+                gap: function.convertpx(25px);
+                border-bottom: 1px solid rgb(56, 50, 65);
+                padding-bottom: function.convertpx(32px);
+                img{
+                    cursor: pointer;
+                }
+            }
+
+            &.bottomFooter{
+                display: flex;
+                justify-content: space-between;
+                div{
+                    &.bottomFooterLeft{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 20px;
+                        div{
+                            &.leftSide{
+                                &:hover{
+                                    div.slider{
+                                    outline: 3px solid #7050af;
+                                        }
+                                    }
+                                cursor: pointer;
+                                background-color: #666171;
+                                width: 56px;
+                                height: 32px;
+                                border-radius: function.convertpx(16px);
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                div{
+                                    margin-top: function.convertpx(3px);
+                                    position: relative;
+                                    div.slider{
+                                        width: 28px;
+                                        height: 27px;
+                                        border-radius: 50%;
+                                        background-color: #27262c;
+                                        position: absolute;
+                                        transform: translate(-50%, -50%);
+                                        margin: 0%;
+                                        top: 10px;
+                                        left: 37px;
+                                        }
+
+                                        &.nightMode{
+                                            img{
+                                                margin-left: 2px;
+                                                filter: invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%);
+                                            }
+                                        }
+                                }
+                            }
+                            
+                            &.rightSide{
+                                position: relative;
+                              div.showedSide{
+                                &:hover{
+                                    opacity:0.7;
+                                    transition: 0.3s;
+                                }
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                gap: function.convertpx(5px);
+                                p{
+                                    margin-top: 2px;
+                                    font-weight: font.$fontHeavyWeight;
+                                    color: #b8add2;
+                                    transform: scale(.8);
+                                }
+                                }
+                                div.languages{
+                                    position: absolute;
+                                    bottom: 30px;
+                                    display: flex;
+                                    flex-flow: column;
+                                    height: 400px;
+                                    width: max-content;
+                                    overflow-y: scroll;
+                                    z-index: 10;
+                                    opacity: 0;
+                                    display: none;
+                                    button{
+                                        cursor: pointer;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border: none;
+                                        min-width: 158px;
+                                        min-height: 32px;
+                                        background-color: color.$mainBlack;
+                                        p{
+                                            font-family: font.$fontFamily, sans-serif;
+                                            font-weight: font.$fontHeavyWeight;
+                                            color: white;
+                                            font-size: function.convertpx(16px);
+                                        }
+                                        &:hover{
+                                            p{
+                                            opacity: 0.6;
+                                            transition: 0.3s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.bottomFooterRight{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        div{
+                            &.leftSide{
+                                a{
+                                    display: flex;
+                                    align-items: center;
+                                    text-decoration: none;
+                                    color:#b8add2;
+                                    font-weight: font.$fontHeavyWeight;
+                                    img{
+                                        margin-right: function.convertpx(10px);
+                                    }
+                                }
+                            }
+
+                            &.rightSide{
+                                a{
+                                    width: function.convertpx(140px);
+                                    cursor:pointer;
+                                    text-decoration: none;
+                                    button{
+                                        @include buttons.button;
+                                        margin-right: 0%;
+                                        width: function.convertpx(140px);
+                                        height: function.convertpx(32px);
+                                        div.inButton{
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            position: relative;
+                                        p{
+                                        font-family: font.$fontFamily, sans-serif;
+                                        font-weight: font.$fontHeavyWeight;
+                                        font-size: function.convertpx(12px);
+                                        transform: scale(1.2, 1.2);
+                                        }
+                                        img{
+                                            position: absolute;
+                                            left: function.convertpx(80px);
+                                            filter: brightness(0) invert(1);
+                                        }
+                                    }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}

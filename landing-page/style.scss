@@ -1,0 +1,20 @@
+@use '../css/colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
+@use '../css/fontModule' as font; //importo il modulo dei fonts
+
+@use '../css/functionModule' as function;
+
+@use '../css/inputModule' as input;
+
+@use '../css/buttons' as buttons;
+
+@use 'sezione_7'; // Inserisco il modulo del css della sezione 7 (pre-footer) - Francesco
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font.$fontFamily, sans-serif;
+}
+
+

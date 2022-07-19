@@ -1,15 +1,76 @@
-@use "colorsModule" as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+@use "./css/colorsModule" as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
 
-@use "fontModule" as font; //importo il modulo dei fonts
+@use "./css/fontModule" as font; //importo il modulo dei fonts
 
-@use "functionModule" as function;
+@use "./css/functionModule" as function;
 
-@use "inputModule" as input;
+@use "./css/inputModule" as input;
 
-@use "buttons" as buttons;
+@use "./css/buttons" as buttons;
 
-#title-par {
-  span {
-    color: color.$mainPurple;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.img-text {
+  margin-top: function.convertpx(100px);
+  background-color: color.$mainBlack;
+  display: flex;
+  justify-content: center;
+
+  .img-motion {
+    height: function.convertpx(430px);
+    width: function.convertpx(418px);
+
+    #arrow,
+    #cake,
+    #folder {
+      height: function.convertpx(115px);
+      width: function.convertpx(130px);
+      display: flex;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: function.convertpx(10px);
+  margin: 0px 0px 24px;
+  font-family: font.$fontFamily, sans-serif;
+  width: function.convertpx(428px);
+
+  #title-par {
+    font-size: function.convertpx(40px);
+    color: #f4eeff;
+    margin: 0px 0px 24px;
+    font-weight: font.$fontHeavyWeight;
+    span {
+      color: color.$mainPurple;
+    }
+  }
+
+  #subtitle-par {
+    height: function.convertpx(48px);
+    color: #b8add2;
+    margin: 0px 0px 24px;
+    font-weight: font.$fontLightWeight;
+    margin-bottom: function.convertpx(24px);
+    font-size: function.convertpx(16px);
+  }
+}
+
+.btn-links {
+  height: function.convertpx(48px);
+
+  button {
+  }
+
+  a {
+    text-decoration: none;
+    color: color.$buttonBlue;
   }
 }

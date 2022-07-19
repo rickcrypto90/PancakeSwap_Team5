@@ -1,17 +1,58 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "colorsModule" as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   style.scss 1:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"colorsModule\" as color; //importo il modulo dei colori rinominandolo \"color\" per quando bisognerà richiamarlo\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 1:1  root stylesheet";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.img-text {
+  margin-top: 6.25rem;
+  background-color: #27262c;
+  display: flex;
+  justify-content: center;
+}
+.img-text .img-motion {
+  height: 26.875rem;
+  width: 26.125rem;
+}
+.img-text .img-motion #arrow,
+.img-text .img-motion #cake,
+.img-text .img-motion #folder {
+  height: 7.1875rem;
+  width: 8.125rem;
+  display: flex;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 0px 0px 24px;
+  font-family: "Kanit", sans-serif;
+  width: 26.75rem;
+}
+.text #title-par {
+  font-size: 2.5rem;
+  color: #f4eeff;
+  margin: 0px 0px 24px;
+  font-weight: 600;
+}
+.text #title-par span {
+  color: #9a6aff;
+}
+.text #subtitle-par {
+  height: 3rem;
+  color: #b8add2;
+  margin: 0px 0px 24px;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-links {
+  height: 3rem;
+}
+.btn-links a {
+  text-decoration: none;
+  color: #1fc7d4;
+}/*# sourceMappingURL=style.css.map */

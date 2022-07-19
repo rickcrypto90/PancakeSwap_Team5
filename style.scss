@@ -1,0 +1,15 @@
+@use "colorsModule" as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
+@use "fontModule" as font; //importo il modulo dei fonts
+
+@use "functionModule" as function;
+
+@use "inputModule" as input;
+
+@use "buttons" as buttons;
+
+#title-par {
+  span {
+    color: color.$mainPurple;
+  }
+}

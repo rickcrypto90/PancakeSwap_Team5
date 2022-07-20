@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #08060b
+    background-color: rgb(8, 6, 11);
 }
 
 .blocco1flex {
@@ -84,7 +84,7 @@
 
             button:hover {
                 background-color: #199ea7;
-                //cursor: pointer;
+                cursor: pointer;
             }
         }
     }
@@ -108,7 +108,7 @@
             position: relative;
             top: 230px;
             left: 40px;
-            width: 220px;
+            width: 250px;
             z-index: 2;
         }
 
@@ -157,7 +157,7 @@
 .quadro5,
 .quadro3,
 .quadro6 {
-    border-left: 0.7px white solid;
+    border-left: 1px rgb(38, 33, 48) solid;
     height: 50%;
     padding-left: 15px;
 }

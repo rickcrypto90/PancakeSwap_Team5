@@ -12,11 +12,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: font.$fontFamily, sans-serif;
+  background-color: color.$mainBlack;
 }
 
 .img-text {
   margin-top: function.convertpx(100px);
-  background-color: color.$mainBlack;
   display: flex;
   justify-content: center;
 
@@ -39,8 +40,7 @@
   flex-direction: column;
   justify-content: center;
   gap: function.convertpx(10px);
-  margin: 0px 0px 24px;
-  font-family: font.$fontFamily, sans-serif;
+  margin: 0px 0px function.convertpx(24px);
   width: function.convertpx(428px);
 
   #title-par {
@@ -56,7 +56,7 @@
   #subtitle-par {
     height: function.convertpx(48px);
     color: #b8add2;
-    margin: 0px 0px 24px;
+    margin: 0px 0px function.convertpx(24px);
     font-weight: font.$fontLightWeight;
     margin-bottom: function.convertpx(24px);
     font-size: function.convertpx(16px);
@@ -65,12 +65,86 @@
 
 .btn-links {
   height: function.convertpx(48px);
+  display: flex;
+  align-items: center;
 
   button {
+    margin-right: function.convertpx(10px);
+    align-items: center;
+    border-radius: function.convertpx(16px);
+    cursor: pointer;
+    font-size: function.convertpx(16px);
+    font-weight: font.$fontHeavyWeight;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    height: function.convertpx(48px);
+    padding: 0px function.convertpx(24px);
+    background-color: color.$buttonBlue;
+    color: white;
+    margin-right: function.convertpx(8px);
+  }
+
+  button:hover {
+    background-color: #199ea7;
   }
 
   a {
     text-decoration: none;
     color: color.$buttonBlue;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.title-res-data {
+  font-size: function.convertpx(20px);
+  font-weight: font.$fontHeavyWeight;
+  height: function.convertpx(24px);
+  width: function.convertpx(920px);
+  margin-left: function.convertpx(338px);
+  display: flex;
+  align-items: center;
+  margin-bottom: function.convertpx(20px);
+  color: #f4eeff;
+
+  span {
+    color: color.$mainPurple;
+    margin-left: function.convertpx(5px);
+    margin-right: function.convertpx(10px);
+  }
+
+  button {
+    width: function.convertpx(24px);
+    height: function.convertpx(24px);
+  }
+}
+
+.res-data {
+  display: flex;
+  justify-content: space-between;
+  width: function.convertpx(920px);
+  height: function.convertpx(80px);
+  margin-left: function.convertpx(330px);
+  font-weight: font.$fontHeavyWeight;
+
+  #subtitle-res-data {
+    border-left: function.convertpx(20px);
+    background-color: white;
+    
+    padding-left: function.convertpx(10px);
+    
+    h5 {
+      color: color.$mainPurple;
+      margin-bottom: function.convertpx(8px);
+    }
+    p {
+      color: #f4eeff;
+      margin-bottom: function.convertpx(5px);
+    }
+    p:nth-last-child(1) {
+      color: #b8add2;
+    }
   }
 }

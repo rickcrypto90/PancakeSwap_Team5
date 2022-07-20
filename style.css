@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  background-color: #27262c;
 }
 
 .img-text {
   margin-top: 6.25rem;
-  background-color: #27262c;
   display: flex;
   justify-content: center;
 }
@@ -27,8 +28,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.625rem;
-  margin: 0px 0px 24px;
-  font-family: "Kanit", sans-serif;
+  margin: 0px 0px 1.5rem;
   width: 26.75rem;
 }
 .text #title-par {
@@ -43,7 +43,7 @@
 .text #subtitle-par {
   height: 3rem;
   color: #b8add2;
-  margin: 0px 0px 24px;
+  margin: 0px 0px 1.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   font-size: 1rem;
@@ -51,8 +51,77 @@
 
 .btn-links {
   height: 3rem;
+  display: flex;
+  align-items: center;
+}
+.btn-links button {
+  margin-right: 0.625rem;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  height: 3rem;
+  padding: 0px 1.5rem;
+  background-color: #1fc7d4;
+  color: white;
+  margin-right: 0.5rem;
+}
+.btn-links button:hover {
+  background-color: #199ea7;
 }
 .btn-links a {
   text-decoration: none;
   color: #1fc7d4;
+}
+.btn-links a:hover {
+  text-decoration: underline;
+}
+
+.title-res-data {
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 1.5rem;
+  width: 57.5rem;
+  margin-left: 21.125rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  color: #f4eeff;
+}
+.title-res-data span {
+  color: #9a6aff;
+  margin-left: 0.3125rem;
+  margin-right: 0.625rem;
+}
+.title-res-data button {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.res-data {
+  display: flex;
+  justify-content: space-between;
+  width: 57.5rem;
+  height: 5rem;
+  margin-left: 20.625rem;
+  font-weight: 600;
+}
+.res-data #subtitle-res-data {
+  border-left: 1.25rem;
+  background-color: white;
+  padding-left: 0.625rem;
+}
+.res-data #subtitle-res-data h5 {
+  color: #9a6aff;
+  margin-bottom: 0.5rem;
+}
+.res-data #subtitle-res-data p {
+  color: #f4eeff;
+  margin-bottom: 0.3125rem;
+}
+.res-data #subtitle-res-data p:nth-last-child(1) {
+  color: #b8add2;
 }/*# sourceMappingURL=style.css.map */

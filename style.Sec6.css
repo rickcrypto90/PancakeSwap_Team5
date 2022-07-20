@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #27262c;
+  background-color: #08060b;
 }
 
 .blocco1flex {
@@ -22,24 +22,29 @@
   align-items: center;
   flex: 2;
 }
+
 .blocco1flex .textblocco1 {
   color: #f4eeff;
   font-size: 2.5rem;
 }
+
 .blocco1flex .textblocco1 span {
   color: #9a6aff;
 }
+
 .blocco1flex .textblocco1 .paragrafo {
   font-size: 1rem;
   color: #b8a2dd;
   padding-top: 20px;
 }
+
 .blocco1flex .textblocco1 .bottone-learn {
   padding-top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .blocco1flex .textblocco1 .bottone-learn button {
   padding-top: 15px;
   border-radius: 16px;
@@ -53,11 +58,13 @@
   opacity: 1;
   letter-spacing: 0.03em;
 }
+
 .blocco1flex .textblocco1 .bottone-learn button p {
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 12px;
 }
+
 .blocco1flex .textblocco1 .bottone-learn #learn {
   font-size: 16px;
   color: #1fc7d4;
@@ -73,12 +80,14 @@
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(3, auto);
-  grid-template-areas: "quadro1, quadro2, quadro3" "quadro4, quadro5, quadro6";
+  grid-template-areas: "quadro1, quadro2, quadro3""quadro4, quadro5, quadro6";
 }
+
 .blocco2grid p {
   font-size: 16px;
   color: #b8a2dd;
 }
+
 .blocco2grid h5 {
   font-size: 24px;
   color: #f4eeff;
@@ -88,10 +97,12 @@
   width: 100%;
   position: relative;
 }
+
 .imgBounce #main-img {
   z-index: 1;
   position: absolute;
 }
+
 .imgBounce #top-left {
   z-index: 2;
   position: absolute;

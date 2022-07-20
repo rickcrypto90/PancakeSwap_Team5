@@ -21,8 +21,8 @@
 }
 
 .blocco1flex {
-    padding-left: 100px;
-    padding-right: 100px;
+    width: 920px;
+    height: 300px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -30,7 +30,7 @@
 
     .textblocco1 {
         color: #f4eeff;
-        font-size: function.convertpx(40);
+        font-size: function.convertpx(30);
 
         span {
             color: #9a6aff;
@@ -76,18 +76,64 @@
                 text-decoration: none;
                 padding-left: 10px;
             }
+
+            a#learn:hover {
+                text-decoration: underline;
+            }
+
+            button:hover {
+                background-color: #199ea7;
+                //cursor: pointer;
+            }
         }
     }
 
 
 }
 
+.imgBounce {
+    figure {
+        padding-left: 50px;
+        padding-bottom: 20px;
+
+        #main-img {
+            position: relative;
+            width: 320px;
+            z-index: 1;
+
+        }
+
+        #top-left {
+            position: relative;
+            top: 230px;
+            left: 40px;
+            width: 220px;
+            z-index: 2;
+        }
+
+        #bottom-right {
+            position: relative;
+            width: 220px;
+            bottom: 230px;
+            right: 150px;
+        }
+
+        #top-right {
+            position: relative;
+            width: 210px;
+            top: -300px;
+            right: -100px;
+        }
+
+    }
+
+
+}
 
 .blocco2grid {
-    padding-left: 100px; //sistemare
-    padding-right: 150px;
+    width: 920px;
+    height: 133px;
     flex: 1;
-    width: 100%;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, auto);
@@ -110,22 +156,7 @@
 .quadro5,
 .quadro3,
 .quadro6 {
-    border-right: 1px white solid;
-}
-
-.imgBounce {
-    width: 100%;
-    position: relative;
-
-    #main-img {
-        z-index: 1;
-        position: absolute;
-    }
-
-    #top-left {
-        z-index: 2;
-        position: absolute;
-        top: 10px;
-        right: 100px;
-    }
+    border-left: 0.7px white solid;
+    height: 50%;
+    padding-left: 15px;
 }

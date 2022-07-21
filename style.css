@@ -3,24 +3,36 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
-  background-color: #27262c;
 }
 
 .img-text {
   margin-top: 6.25rem;
   display: flex;
   justify-content: center;
+  gap: 2.5rem;
 }
-.img-text .img-motion {
-  height: 26.875rem;
-  width: 26.125rem;
+.img-text figure {
+  width: 26.875rem;
+  height: 25.9375rem;
+  position: relative;
 }
-.img-text .img-motion #arrow,
-.img-text .img-motion #cake,
-.img-text .img-motion #folder {
-  height: 7.1875rem;
-  width: 8.125rem;
-  display: flex;
+.img-text figure #arrow {
+  width: 26.875rem;
+  height: 25.9375rem;
+}
+.img-text figure #cake {
+  width: 26.75rem;
+  height: 26.75rem;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+.img-text figure #folder {
+  width: 26.875rem;
+  height: 25.9375rem;
+  position: absolute;
+  left: 20px;
+  z-index: 2;
 }
 
 .text {
@@ -90,6 +102,7 @@
   align-items: center;
   margin-bottom: 1.25rem;
   color: #f4eeff;
+  margin-top: 1.25rem;
 }
 .title-res-data span {
   color: #9a6aff;
@@ -109,9 +122,19 @@
   margin-left: 20.625rem;
   font-weight: 600;
 }
+.res-data #sub-res-data h5 {
+  color: #9a6aff;
+  margin-bottom: 0.5rem;
+}
+.res-data #sub-res-data p {
+  color: #f4eeff;
+  margin-bottom: 0.3125rem;
+}
+.res-data #sub-res-data p:nth-last-child(1) {
+  color: #b8add2;
+}
 .res-data #subtitle-res-data {
-  border-left: 1.25rem;
-  background-color: white;
+  border-left: 0.0625rem solid white;
   padding-left: 0.625rem;
 }
 .res-data #subtitle-res-data h5 {

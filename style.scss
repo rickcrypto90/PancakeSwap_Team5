@@ -13,7 +13,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: font.$fontFamily, sans-serif;
-  // background-color: color.$mainBlack;
+}
+
+.sectionSix {
+  background-color: #3b374b;
 }
 
 .img-text {
@@ -22,30 +25,36 @@
   justify-content: center;
   gap: function.convertpx(40px);
 
-  figure {
-    width: function.convertpx(430px);
-    height: function.convertpx(415px);
+  .img-motion {
+    display: flex;
     position: relative;
+    width: function.convertpx(430px);
+    height: function.convertpx(418px);
+  }
+
+  figure {
+    width: max-content;
+    max-height: 512px;
+    z-index: 2;
 
     #arrow {
       width: function.convertpx(430px);
       height: function.convertpx(415px);
+      position: absolute;
     }
 
     #cake {
       width: function.convertpx(428px);
       height: function.convertpx(428px);
       position: absolute;
-      right: 10px;
-      z-index: 1;
     }
 
     #folder {
       width: function.convertpx(430px);
       height: function.convertpx(415px);
       position: absolute;
-      left: 20px;
-      z-index: 2;
+      left: function.convertpx(5px);
+      z-index: 5;
     }
   }
 }
@@ -95,7 +104,7 @@
     height: function.convertpx(48px);
     padding: 0px function.convertpx(24px);
     background-color: color.$buttonBlue;
-    color: white;
+    color: #f4eeff;
     margin-right: function.convertpx(8px);
   }
 
@@ -118,12 +127,11 @@
   font-weight: font.$fontHeavyWeight;
   height: function.convertpx(24px);
   width: function.convertpx(920px);
-  margin-left: function.convertpx(338px);
+  margin-left: function.convertpx(330px);
   display: flex;
   align-items: center;
-  margin-bottom: function.convertpx(20px);
+  margin-top: function.convertpx(10px);
   color: #f4eeff;
-  margin-top: function.convertpx(20px);
 
   span {
     color: color.$mainPurple;
@@ -131,9 +139,22 @@
     margin-right: function.convertpx(10px);
   }
 
+  svg {
+    width: function.convertpx(24px);
+    height: function.convertpx(24px);
+  }
+
   button {
     width: function.convertpx(24px);
     height: function.convertpx(24px);
+    cursor: pointer;
+    border: none;
+    fill: #b8add2;
+    background-color: #3b374b;
+  }
+
+  button:hover {
+    fill: #8a7da8;
   }
 }
 
@@ -144,9 +165,10 @@
   height: function.convertpx(80px);
   margin-left: function.convertpx(330px);
   font-weight: font.$fontHeavyWeight;
+  margin-top: function.convertpx(20px);
 
   #sub-res-data {
-    h5 {
+    h6 {
       color: color.$mainPurple;
       margin-bottom: function.convertpx(8px);
     }
@@ -161,10 +183,10 @@
   }
 
   #subtitle-res-data {
-    border-left: function.convertpx(1px) solid white;
+    border-left: function.convertpx(1px) solid #000000;
     padding-left: function.convertpx(10px);
 
-    h5 {
+    h6 {
       color: color.$mainPurple;
       margin-bottom: function.convertpx(8px);
     }

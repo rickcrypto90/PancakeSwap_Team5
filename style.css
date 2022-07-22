@@ -5,34 +5,45 @@
   font-family: "Kanit", sans-serif;
 }
 
+.sectionSix {
+  background-color: #3b374b;
+}
+
 .img-text {
   margin-top: 6.25rem;
   display: flex;
   justify-content: center;
   gap: 2.5rem;
 }
-.img-text figure {
-  width: 26.875rem;
-  height: 25.9375rem;
+.img-text .img-motion {
+  display: flex;
   position: relative;
+  width: 26.875rem;
+  height: 26.125rem;
+}
+.img-text figure {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-height: 512px;
+  z-index: 2;
 }
 .img-text figure #arrow {
   width: 26.875rem;
   height: 25.9375rem;
+  position: absolute;
 }
 .img-text figure #cake {
   width: 26.75rem;
   height: 26.75rem;
   position: absolute;
-  right: 10px;
-  z-index: 1;
 }
 .img-text figure #folder {
   width: 26.875rem;
   height: 25.9375rem;
   position: absolute;
-  left: 20px;
-  z-index: 2;
+  left: 0.3125rem;
+  z-index: 5;
 }
 
 .text {
@@ -78,7 +89,7 @@
   height: 3rem;
   padding: 0px 1.5rem;
   background-color: #1fc7d4;
-  color: white;
+  color: #f4eeff;
   margin-right: 0.5rem;
 }
 .btn-links button:hover {
@@ -97,21 +108,31 @@
   font-weight: 600;
   height: 1.5rem;
   width: 57.5rem;
-  margin-left: 21.125rem;
+  margin-left: 20.625rem;
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-top: 0.625rem;
   color: #f4eeff;
-  margin-top: 1.25rem;
 }
 .title-res-data span {
   color: #9a6aff;
   margin-left: 0.3125rem;
   margin-right: 0.625rem;
 }
+.title-res-data svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .title-res-data button {
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
+  border: none;
+  fill: #b8add2;
+  background-color: #3b374b;
+}
+.title-res-data button:hover {
+  fill: #8a7da8;
 }
 
 .res-data {
@@ -121,8 +142,9 @@
   height: 5rem;
   margin-left: 20.625rem;
   font-weight: 600;
+  margin-top: 1.25rem;
 }
-.res-data #sub-res-data h5 {
+.res-data #sub-res-data h6 {
   color: #9a6aff;
   margin-bottom: 0.5rem;
 }
@@ -134,10 +156,10 @@
   color: #b8add2;
 }
 .res-data #subtitle-res-data {
-  border-left: 0.0625rem solid white;
+  border-left: 0.0625rem solid #000000;
   padding-left: 0.625rem;
 }
-.res-data #subtitle-res-data h5 {
+.res-data #subtitle-res-data h6 {
   color: #9a6aff;
   margin-bottom: 0.5rem;
 }

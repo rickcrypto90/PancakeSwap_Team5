@@ -242,53 +242,67 @@ body{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        gap: 20px;
+                        gap: function.convertpx(20px);
                         div{
                             &.leftSide{
                                 &:hover{
                                     div.slider{
-                                    outline: 3px solid #7050af;
+                                    outline: function.convertpx(3px) solid #7050af;
                                         }
                                     }
+                                    position: relative;
                                 cursor: pointer;
                                 background-color: #666171;
-                                width: 56px;
-                                height: 32px;
+                                width: function.convertpx(60px);
+                                height: function.convertpx(30px);
                                 border-radius: function.convertpx(16px);
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-around;
+                                div.slider{
+                                    width: function.convertpx(30px);
+                                    height: function.convertpx(30px);
+                                    border-radius: 50%;
+                                    background-color: #27262c;
+                                    position: absolute;
+                                    transform: translate(50%) scale(0.9);
+                                    margin: 0%;
+                                    }
                                 div{
                                     margin-top: function.convertpx(3px);
-                                    position: relative;
-                                    div.slider{
-                                        width: 28px;
-                                        height: 27px;
-                                        border-radius: 50%;
-                                        background-color: #27262c;
-                                        position: absolute;
-                                        transform: translate(-50%, -50%);
-                                        margin: 0%;
-                                        top: 10px;
-                                        left: 37px;
-                                        }
-
                                         &.nightMode{
                                             img{
-                                                margin-left: 2px;
+                                                margin-left: function.convertpx(2px);
                                                 filter: invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%);
                                             }
                                         }
+                                        &.lightMode{
+                                            img{
+                                            margin-left: function.convertpx(2px);
+                                            filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);                                            }
+                                        }  
                                 }
                             }
                             
                             &.rightSide{
                                 position: relative;
-                              div.showedSide{
                                 &:hover{
+                                    div.showedSide{
                                     opacity:0.7;
                                     transition: 0.3s;
-                                }
+                                    }
+                                    >div.languages{
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                 }
+                                 &:focus{
+                                    >div.languages{
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                 }
+                              div.showedSide{
                                 cursor: pointer;
                                 display: flex;
                                 align-items: center;
@@ -302,23 +316,24 @@ body{
                                 }
                                 div.languages{
                                     position: absolute;
-                                    bottom: 30px;
+                                    bottom: function.convertpx(30px);
                                     display: flex;
                                     flex-flow: column;
-                                    height: 400px;
+                                    height: function.convertpx(400px);
                                     width: max-content;
                                     overflow-y: scroll;
                                     z-index: 10;
+                                    visibility: hidden;
                                     opacity: 0;
-                                    display: none;
+                                    transition: visibility 0.4s, opacity 0.4s;
                                     button{
                                         cursor: pointer;
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
                                         border: none;
-                                        min-width: 158px;
-                                        min-height: 32px;
+                                        min-width: function.convertpx(158px);
+                                        min-height: function.convertpx(32px);
                                         background-color: color.$mainBlack;
                                         p{
                                             font-family: font.$fontFamily, sans-serif;
@@ -341,7 +356,7 @@ body{
                     &.bottomFooterRight{
                         display: flex;
                         align-items: center;
-                        gap: 10px;
+                        gap: function.convertpx(10px);
                         div{
                             &.leftSide{
                                 a{
@@ -351,7 +366,12 @@ body{
                                     color:#b8add2;
                                     font-weight: font.$fontHeavyWeight;
                                     img{
-                                        margin-right: function.convertpx(10px);
+                                        margin-right: function.convertpx(5px);
+                                    }
+                                    div{
+                                        font-family: font.$fontFamily, sans-serif;
+                                        font-weight: 800;
+                                        transform: scale(0.8, 0.95);
                                     }
                                 }
                             }

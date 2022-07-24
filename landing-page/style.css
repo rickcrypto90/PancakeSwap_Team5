@@ -200,52 +200,62 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide {
+  position: relative;
   cursor: pointer;
   background-color: #666171;
-  width: 56px;
-  height: 32px;
+  width: 3.75rem;
+  height: 1.875rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide:hover div.slider {
-  outline: 3px solid #7050af;
+  outline: 0.1875rem solid #7050af;
 }
-body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div {
-  margin-top: 0.1875rem;
-  position: relative;
-}
-body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div div.slider {
-  width: 28px;
-  height: 27px;
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.slider {
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
   background-color: #27262c;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(50%) scale(0.9);
   margin: 0%;
-  top: 10px;
-  left: 37px;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div {
+  margin-top: 0.1875rem;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.nightMode img {
-  margin-left: 2px;
+  margin-left: 0.125rem;
   filter: invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.lightMode img {
+  margin-left: 0.125rem;
+  filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide {
   position: relative;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:hover div.showedSide {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:hover > div.languages {
+  visibility: visible;
+  opacity: 1;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:focus > div.languages {
+  visibility: visible;
+  opacity: 1;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.showedSide {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.3125rem;
-}
-body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.showedSide:hover {
-  opacity: 0.7;
-  transition: 0.3s;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.showedSide p {
   margin-top: 2px;
@@ -255,15 +265,16 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages {
   position: absolute;
-  bottom: 30px;
+  bottom: 1.875rem;
   display: flex;
   flex-flow: column;
-  height: 400px;
+  height: 25rem;
   width: max-content;
   overflow-y: scroll;
   z-index: 10;
+  visibility: hidden;
   opacity: 0;
-  display: none;
+  transition: visibility 0.4s, opacity 0.4s;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button {
   cursor: pointer;
@@ -271,8 +282,8 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
   justify-content: center;
   align-items: center;
   border: none;
-  min-width: 158px;
-  min-height: 32px;
+  min-width: 9.875rem;
+  min-height: 2rem;
   background-color: #27262c;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button p {
@@ -288,7 +299,7 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
 body footer div.footerContainer div.bottomFooter div.bottomFooterRight {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a {
   display: flex;
@@ -298,7 +309,12 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftS
   font-weight: 600;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a img {
-  margin-right: 0.625rem;
+  margin-right: 0.3125rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a div {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  transform: scale(0.8, 0.95);
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a {
   width: 8.75rem;

@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: font.$fontFamily;
+    font-family: font.$fontFamily, sans-serif;
 }
 
 .sezione6 {
@@ -41,6 +41,9 @@
             font-size: function.convertpx(16);
             color: #b8a2dd;
             padding-top: 20px;
+            transform: scale(1, 0.9);
+            line-height: 1.5;
+
         }
 
         .bottone-learn {
@@ -142,13 +145,14 @@
         "quadro4, quadro5, quadro6";
 
     p {
-        font-size: 16px;
-        color: #b8a2dd;
+        font-size: 24px;
+        color: #f4eeff;
+        font-weight: 800;
     }
 
     h5 {
-        font-size: 24px;
-        color: #f4eeff;
+        font-size: 12px;
+        color: #b8a2dd;
     }
 
 }

@@ -20,11 +20,15 @@ function updateData() {
     getApi().then(pancakeData => {
         for (let key of pancakeDataKeys) {
             let p = document.getElementById(key);
-            if (p) {
-                p.innerHTML = Math.round(pancakeData[key]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            if (p.id === "circulating_supply") {
+                p.innerHTML = counterAnim("#circulating_supply", 10, pancakeData[key], 1000);
             }
-            else
-                console.log('Error! no dom elem with this id: ' + key);
+            else if (p.id === "total_supply") {
+                p.innerHTML = counterAnim("#total_supply", 10, pancakeData[key], 1000);
+            }
+            // else {
+            //     console.log('Error! no dom elem with this id: ' + key);
+            // }
         }
         let marketCap = document.getElementById('market_cap');
         marketCap.innerHTML = `$${Math.round(pancakeData.market_cap)
@@ -32,5 +36,20 @@ function updateData() {
 
     })
 }
-updateData();
+const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+    let internationalNumberFormat = new Intl.NumberFormat('en-US')
+    const target = document.querySelector(qSelector);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        target.innerText = internationalNumberFormat.format(Math.floor(progress * (end - start) + start));
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+};
+//#endregion - end of - number counter animation
+updateData()
 setInterval(updateData, 20000);

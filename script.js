@@ -27,13 +27,16 @@ let animazione = tl
 const title = document.querySelector(".title-res-data>span");
 const arrows = document.querySelector(".title-res-data>button");
 const hidden = document.querySelector(".hidden");
+const first = document.querySelector(".res-data");
 
 arrows.addEventListener("click", () => {
-  if (title.innerHTML === "Syrup Pools") {
-    title.innerHTML = "Farms";
-    hidden.style.display = "none";
-  } else if (title.innerHTML === "Farms") {
+  if (title.innerHTML === "Farms") {
     title.innerHTML = "Syrup Pools";
     hidden.style.display = "block";
+    first.style.display = "none";
+  } else if (title.innerHTML === "Syrup Pools") {
+    title.innerHTML = "Farms";
+    hidden.style.display = "none";
+    first.style.display = "flex";
   }
 });

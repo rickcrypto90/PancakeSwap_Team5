@@ -199,3 +199,49 @@
     }
   }
 }
+
+.hidden {
+  // display: none;
+
+  #res-data-hidden {
+    display: flex;
+    justify-content: space-between;
+    width: function.convertpx(920px);
+    height: function.convertpx(80px);
+    margin-left: function.convertpx(330px);
+    font-weight: font.$fontHeavyWeight;
+    margin-top: function.convertpx(20px);
+
+    #sub-res-data-hidden {
+      
+      h6 {
+        color: color.$mainPurple;
+        margin-bottom: function.convertpx(8px);
+      }
+
+      p {
+        color: #f4eeff;
+        margin-bottom: function.convertpx(5px);
+      }
+      p:nth-last-child(1) {
+        color: #b8add2;
+      }
+    }
+    #subtitle-res-data-hidden {
+      border-left: function.convertpx(1px) solid #000000;
+      padding-left: function.convertpx(10px);
+
+      h6 {
+        color: color.$mainPurple;
+        margin-bottom: function.convertpx(8px);
+      }
+      p {
+        color: #f4eeff;
+        margin-bottom: function.convertpx(5px);
+      }
+      p:nth-last-child(1) {
+        color: #b8add2;
+      }
+    }
+  }
+}

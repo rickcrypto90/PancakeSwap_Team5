@@ -1,0 +1,14 @@
+@mixin input {
+
+    background-color: rgb(55, 47, 71);
+    border-radius: 16px;
+    box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+    color: rgb(244, 238, 255);
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    outline: 0px;
+    padding: 0px 16px;
+    width: 100%;
+    border: 1px solid rgb(38, 33, 48);
+}

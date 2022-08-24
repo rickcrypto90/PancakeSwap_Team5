@@ -7,7 +7,7 @@
 
 body section.sectionSeven {
   background-color: #6f3db1;
-  background-image: url(../assets-section7/background.svg);
+  background-image: url(./resources/assets-section7/background.svg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -119,6 +119,7 @@ body section.sectionSeven div.sectionSeven-centralDiv button a {
   color: inherit;
 }
 body footer {
+  overflow-x: hidden;
   background-color: #27262c;
   display: flex;
   justify-content: center;
@@ -196,6 +197,9 @@ body footer div.footerContainer div.bottomFooter {
   display: flex;
   justify-content: space-between;
 }
+body footer div.footerContainer div.bottomFooter picture {
+  display: none;
+}
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft {
   display: flex;
   justify-content: space-between;
@@ -269,6 +273,8 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
   display: flex;
   flex-flow: column;
   height: 25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   overflow-y: scroll;
   z-index: 10;
@@ -365,11 +371,63 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
   filter: brightness(0) invert(1);
 }
 
+@media screen and (max-width: 850px) {
+  section.sectionSeven div.sectionSeven-leftDiv {
+    display: none;
+  }
+  section.sectionSeven div.sectionSeven-rightDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  section.sectionSeven div.sectionSeven-centralDiv h2 {
+    font-size: 1.875rem !important;
+  }
+  section.sectionSeven div.sectionSeven-centralDiv p {
+    font-size: 0.875rem !important;
+  }
+  footer {
+    height: 59.375rem !important;
+  }
+  footer > div.footerContainer div.topFooter {
+    order: 2;
+    flex-direction: column;
+  }
+  footer > div.footerContainer div.topFooter div:last-child {
+    display: none;
+  }
+  footer > div.footerContainer div.midFooter {
+    order: 3;
+  }
+  footer > div.footerContainer div.bottomFooter {
+    order: 1;
+    flex-direction: column;
+  }
+  footer > div.footerContainer div.bottomFooter picture {
+    display: block !important;
+    width: 100%;
+    padding: 1.25rem 0px;
+  }
+  footer > div.footerContainer div.bottomFooter picture img {
+    width: 7.5rem;
+  }
+  footer > div.footerContainer div.bottomFooter div.bottomFooterRight {
+    order: 1;
+    justify-content: space-between;
+    border-top: 0.5px solid rgb(56, 50, 65);
+    padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  footer > div.footerContainer div.bottomFooter div.bottomFooterLeft {
+    order: 2;
+    justify-content: flex-start !important;
+    border-bottom: 0.5px solid rgb(56, 50, 65);
+    padding-bottom: 1.25rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

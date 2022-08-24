@@ -1,12 +1,12 @@
-@use '../css/colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+@use './css/colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
 
-@use '../css/fontModule' as font; //importo il modulo dei fonts
+@use './css/fontModule' as font; //importo il modulo dei fonts
 
-@use '../css/functionModule' as function;
+@use './css/functionModule' as function;
 
-@use '../css/inputModule' as input;
+@use './css/inputModule' as input;
 
-@use '../css/buttons' as buttons;
+@use './css/buttons' as buttons;
 
 * {
     margin: 0;
@@ -21,7 +21,7 @@ body{
         &.sectionSeven{
             background-color: #6f3db1;
             // background-color: color.$mainPurple;
-            background-image: url(../assets-section7/background.svg);
+            background-image: url(./resources/assets-section7/background.svg);
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -144,6 +144,7 @@ body{
     }
 
     footer{ //start footer handling
+        overflow-x: hidden;
         background-color: color.$mainBlack;
         display: flex;
         justify-content: center;
@@ -235,6 +236,9 @@ body{
             }
 
             &.bottomFooter{
+                picture{
+                    display: none;
+                }
                 display: flex;
                 justify-content: space-between;
                 div{
@@ -414,4 +418,71 @@ body{
         }
     }
     }
+}
+
+@media screen and (max-width: 850px){
+    section.sectionSeven{
+        div.sectionSeven-leftDiv{
+            display: none;
+        }
+        div.sectionSeven-rightDiv{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    section{
+        &.sectionSeven{
+            div.sectionSeven-centralDiv{
+                h2{
+                    font-size: function.convertpx(30px)!important;
+                }
+                p{
+                    font-size: function.convertpx(14px)!important;
+                }
+            }
+        }
+    }
+    footer{
+        height: function.convertpx(950px) !important;
+      >div.footerContainer{
+        div.topFooter{
+            order: 2;
+            flex-direction: column; 
+            div:last-child{
+                display: none;
+            }
+        }
+        div.midFooter{
+            order:3;
+        }
+        div.bottomFooter{
+            order:1;
+            flex-direction: column;
+            picture{
+                display: block !important;
+                width: 100%;
+                padding: function.convertpx(20px) 0px;
+                img{
+                    width: function.convertpx(120px);
+
+                }
+            }
+            div.bottomFooterRight{
+                order:1;
+                justify-content: space-between;
+                border-top: .5px solid rgb(56, 50, 65);
+                padding-top: function.convertpx(20px);
+                margin-bottom: function.convertpx(20px);
+            }
+            div.bottomFooterLeft{
+                order:2;
+                justify-content: flex-start !important;
+                border-bottom: .5px solid rgb(56, 50, 65);
+                padding-bottom: function.convertpx(20px);
+            }
+        }
+    }
+}
 }

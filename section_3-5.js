@@ -14,25 +14,17 @@ gsap.to("#b-b-3", {repeat: -1, yoyo: true, y: 10, x: 20, duration: 2.5, ease: "p
 gsap.to("#b-b-4", {repeat: -1, yoyo: true, y: 24, x: 10, duration: 2, ease: "power1.inOut", delay: 0.1} )
 
 //Funzioni aggiornare dati Sezione 5
-
 const jackpotPrediction = document.getElementById('jackpot-prediction');
 const jackpotLottery = document.getElementById('jackpot-lottery');
 
-function updatePrediction() {
-    for(counter=200; counter<500; counter++) {
-        jackpotPrediction.innerHTML = `$${counter} billion`;
-    }
-}
+let predictionAmount = 198;
+setInterval(() => {
+    predictionAmount += 1;
+    jackpotPrediction.innerHTML = `$${predictionAmount} billion`;
+}, 1000);
 
-function updateLottery() {
-    for(counter=1000; counter<1200; counter++) {
-        jackpotLottery.innerHTML = `$${counter}`;
-    }
-    
-}
-
-
-updatePrediction();
-updateLottery();
-setInterval(updatePrediction, 3000, 250);
-setInterval(updateLottery, 3000);
+let lotteryAmount = 1345;
+setInterval(() => {
+    lotteryAmount += 1;
+    jackpotLottery.innerHTML = `$${lotteryAmount}`;
+}, 1000);

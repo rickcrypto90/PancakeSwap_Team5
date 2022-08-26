@@ -5,6 +5,11 @@
   font-family: "Kanit", sans-serif;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .sectionSix {
   background-color: #3b374b;
 }
@@ -34,8 +39,8 @@
   position: absolute;
 }
 .img-text figure #cake {
-  width: 26.75rem;
-  height: 26.75rem;
+  width: 26.875rem;
+  height: 25.9375rem;
   position: absolute;
 }
 .img-text figure #folder {
@@ -145,7 +150,7 @@
   margin-top: 1.25rem;
 }
 .res-data #sub-res-data {
-  width: 100px;
+  width: 6.25rem;
 }
 .res-data #sub-res-data h6 {
   color: #9a6aff;
@@ -159,7 +164,7 @@
   color: #b8add2;
 }
 .res-data #subtitle-res-data {
-  width: 100px;
+  width: 6.25rem;
   border-left: 0.0625rem solid #000000;
   padding-left: 0.625rem;
 }
@@ -228,4 +233,49 @@
 }
 .hidden #res-data-hidden #subtitle-res-data-hidden p:nth-last-child(1) {
   color: #b8add2;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .img-text {
+    flex-direction: column;
+    padding-left: 1.25rem;
+  }
+  .img-text .img-motion {
+    width: 12.5rem;
+    height: 11.5625rem;
+    justify-content: end;
+  }
+  .img-text figure #arrow {
+    width: 12.5rem;
+    height: 11.5625rem;
+  }
+  .img-text figure #cake {
+    width: 12.5rem;
+    height: 11.5625rem;
+  }
+  .img-text figure #folder {
+    width: 12.5rem;
+    height: 11.5625rem;
+  }
+  .img-text .text {
+    width: 100%;
+  }
+  .img-text .text #subtitle-par {
+    margin: 0px;
+    height: 1.875rem;
+  }
+  .img-text .text #title-par {
+    font-size: 1.875rem;
+  }
+  .title-res-data {
+    margin-left: 1.25rem;
+  }
+  .res-data {
+    margin-left: 0.625rem;
+    width: 100%;
+    margin-left: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */

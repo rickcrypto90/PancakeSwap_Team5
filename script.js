@@ -6,21 +6,21 @@ let animazione = tl
     x: 5,
     duration: 1.5,
     stagger: 0.2,
-    ease: "power0.inOut",
+    ease: "inOut",
   })
   .to(
     "#arrow",
-    { y: 10, x: 5, duration: 1, stagger: 0.2, ease: "power0.in" },
+    { y: 10, x: 5, duration: 1, stagger: 0.2, ease: "in" },
     "-=1.5"
   )
   .to(
     "#cake",
-    { y: 15, x: 5, duration: 1, stagger: 0.2, ease: "power0.in" },
+    { y: 15, x: 5, duration: 1, stagger: 0.2, ease: "in" },
     "-=1.5"
   )
   .to(
     "#folder",
-    { y: 15, x: 5, duration: 1, stagger: 0.2, ease: "power0.in" },
+    { y: 15, x: 5, duration: 1, stagger: 0.2, ease: "in" },
     "-=1.5"
   );
 

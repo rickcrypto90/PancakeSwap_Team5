@@ -15,6 +15,11 @@
   font-family: font.$fontFamily, sans-serif;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .sectionSix {
   background-color: #3b374b;
 }
@@ -44,8 +49,8 @@
     }
 
     #cake {
-      width: function.convertpx(428px);
-      height: function.convertpx(428px);
+      width: function.convertpx(430px);
+      height: function.convertpx(415px);
       position: absolute;
     }
 
@@ -168,7 +173,7 @@
   margin-top: function.convertpx(20px);
 
   #sub-res-data {
-    width: 100px;
+    width: function.convertpx(100px);
     h6 {
       color: color.$mainPurple;
       margin-bottom: function.convertpx(8px);
@@ -184,7 +189,7 @@
   }
 
   #subtitle-res-data {
-    width: 100px;
+    width: function.convertpx(100px);
     border-left: function.convertpx(1px) solid #000000;
     padding-left: function.convertpx(10px);
 
@@ -250,5 +255,57 @@
         color: #b8add2;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .img-text {
+    flex-direction: column;
+    padding-left: function.convertpx(20px);
+
+    .img-motion {
+      width: function.convertpx(200px);
+      height: function.convertpx(185px);
+      justify-content: end;
+    }
+
+    figure {
+      #arrow {
+        width: function.convertpx(200px);
+        height: function.convertpx(185px);
+      }
+
+      #cake {
+        width: function.convertpx(200px);
+        height: function.convertpx(185px);
+      }
+
+      #folder {
+        width: function.convertpx(200px);
+        height: function.convertpx(185px);
+      }
+    }
+    .text {
+      width: 100%;
+
+      #subtitle-par {
+        margin: 0px;
+        height: function.convertpx(30px);
+      }
+      #title-par {
+        font-size: function.convertpx(30px);
+      }
+    }
+  }
+  .title-res-data {
+    margin-left: function.convertpx(20px);
+  }
+  .res-data {
+    margin-left: function.convertpx(10px);
+    width: 100%;
+    margin-left: function.convertpx(20px);
   }
 }

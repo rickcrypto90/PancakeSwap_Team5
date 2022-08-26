@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>  
+  <script src="section_3-5.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <div class = "Section_3">
       <div class = "Image-Text_3">
         <div class = "text_3">
-          <h1><span>Trade</span> anything. No registration, no hassle.</h1>
+          <h1 id="h1_section_3"><span>Trade</span> anything. No registration, no hassle.</h1>
           <p>Trade any token on BNB Smart Chain in seconds, just by connecting your wallet.</p>
           <button type="input">
             <a href="">Trade now</a>
@@ -22,13 +24,13 @@
           <a href="">Learn</a>
         </div>
         <div class = "image_3">
-            <div id="img1">
+            <div id="coin1">
               <img src="assets/coin1.webp" alt="moneta fluttuante sfocata in lontananza">
             </div>
-            <div id="img2">
+            <div id="coin2">
               <img src="assets/coin2.webp" alt="moneta fluttuante gialla con simbolo bitcoin">
             </div>
-            <div id="img3">
+            <div id="coin3">
               <img src="assets/coin3.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
             </div>
         </div>
@@ -39,9 +41,40 @@
 
   <!------------------------------------------------------------------------ Sezione 5  ----------------------------------------------------------------------------->
     <div class = "Section_5">
+      <div class="magic-cards">
+        <div id="m-c-1">
+          <img src="assets/bottom-left@2x.webp" alt="moneta fluttuante sfocata in lontananza">
+        </div>
+        <div id="m-c-2">
+          <img src="assets/green@2x.webp" alt="moneta fluttuante gialla con simbolo bitcoin">
+        </div>
+        <div id="m-c-3">
+          <img src="assets/red@2x.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
+        </div>
+        <div id="m-c-4">
+          <img src="assets/top-right@2x.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
+        </div>
+      </div>
+      <div class="biliard-balls">
+        <div id="b-b-1">
+          <img src="assets/2@2x.webp" alt="moneta fluttuante sfocata in lontananza">
+        </div>
+        <div id="b-b-2">
+          <img src="assets/4@2x.webp" alt="moneta fluttuante gialla con simbolo bitcoin">
+        </div>
+        <div id="b-b-3">
+          <img src="assets/6@2x.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
+        </div>
+        <div id="b-b-4">
+          <img src="assets/7@2x.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
+        </div>
+        <div id="b-b-5">
+          <img src="assets/9@2x.webp" alt="moneta fluttuante azzurra con sagoma testa coniglietto" >
+        </div>
+      </div>
       <div class = "container_5">
         <div class = "text_5">
-          <h2><span>Win</span> millions in prizes</h2>
+          <h2 id="h2_section_5"><span>Win</span> millions in prizes</h2>
           <p>Provably fair, on-chain games.</p>
           <p>Win big with PancakeSwap.</p>
         </div>
@@ -63,7 +96,7 @@
             </path>
             </svg>
             <p><b>Prediction</b></p>
-            <h2>Dato aggiorna java</h2>
+            <h2 id="jackpot-prediction">$120.000</h2>
             <p><b>in BNB + CAKE won so far</b></p>
             <p>Predict the price trend of BNB or CAKE to win</p>
             <button type="submit">
@@ -94,7 +127,7 @@
               </path>
             </svg>
             <p><b>Lottery</b></p>
-            <h2>Dato aggiorna java</h2>
+            <h2 id="jackpot-lottery">$120.000</h2>
             <p><b>in CAKE prizes this round</b></p>
             <p>Buy tickets with CAKE, win CAKE if your numbers match</p>
             <button type="submit">

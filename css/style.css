@@ -5,6 +5,11 @@
   font-family: "Kanit";
 }
 
+body {
+  overflow-x: hidden;
+}
+
+/*------------------------------------------------------Sezione 3--------------------------------------------------------------*/
 .Section_3 {
   background-color: rgb(8, 6, 11);
   width: 100vw;
@@ -83,69 +88,198 @@
   min-height: 512px;
   position: relative;
 }
-.Section_3 .Image-Text_3 .image_3 #img1 {
+.Section_3 .Image-Text_3 .image_3 #coin1 {
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-.Section_3 .Image-Text_3 .image_3 #img1 img {
+.Section_3 .Image-Text_3 .image_3 #coin1 img {
   max-height: 100%;
   height: auto;
   max-width: 100%;
   width: auto;
 }
-.Section_3 .Image-Text_3 .image_3 #img2 {
+.Section_3 .Image-Text_3 .image_3 #coin2 {
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-.Section_3 .Image-Text_3 .image_3 #img2 img {
+.Section_3 .Image-Text_3 .image_3 #coin2 img {
   max-height: 100%;
   height: auto;
   max-width: 100%;
   width: auto;
 }
-.Section_3 .Image-Text_3 .image_3 #img3 {
+.Section_3 .Image-Text_3 .image_3 #coin3 {
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-.Section_3 .Image-Text_3 .image_3 #img3 img {
+.Section_3 .Image-Text_3 .image_3 #coin3 img {
   max-height: 100%;
   height: auto;
   max-width: 100%;
   width: auto;
 }
 
+/*---------------------------------------------------------------------------------FINE Sezione 3------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------Sezione 5---------------------------------------------------------------------------------*/
 .Section_5 {
   width: 100vw;
   background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6.25rem 0;
+  position: relative;
+}
+.Section_5 .magic-cards {
+  position: relative;
+  box-sizing: content-box;
+  height: 18.75rem;
+  width: 31.25rem;
+  align-self: flex-end;
+  position: absolute;
+  left: 0;
+  bottom: -4rem;
+}
+.Section_5 .magic-cards #m-c-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Section_5 .magic-cards #m-c-1 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .magic-cards #m-c-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Section_5 .magic-cards #m-c-2 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .magic-cards #m-c-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Section_5 .magic-cards #m-c-3 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .magic-cards #m-c-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.Section_5 .magic-cards #m-c-4 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .biliard-balls {
+  position: relative;
+  box-sizing: content-box;
+  height: 18.75rem;
+  width: 31.25rem;
+  align-self: flex-start;
+  position: absolute;
+  right: 0;
+  top: -4rem;
+}
+.Section_5 .biliard-balls #b-b-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Section_5 .biliard-balls #b-b-1 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .biliard-balls #b-b-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Section_5 .biliard-balls #b-b-2 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .biliard-balls #b-b-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Section_5 .biliard-balls #b-b-3 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .biliard-balls #b-b-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Section_5 .biliard-balls #b-b-4 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+.Section_5 .biliard-balls #b-b-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Section_5 .biliard-balls #b-b-5 img {
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  width: auto;
 }
 .Section_5 .container_5 {
-  width: 80%;
+  z-index: 1;
+  width: 100%;
+  max-width: 55rem;
   background-color: rgba(8, 6, 11, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 2.1875rem;
+  padding: 2.5rem 6.25rem;
   border-radius: 3rem;
   border: 1px solid rgb(56, 50, 65);
   backdrop-filter: blur(12px);
 }
 .Section_5 .container_5 .text_5 {
+  margin-bottom: 2rem;
   text-align: center;
 }
 .Section_5 .container_5 .text_5 h2 {
   font-family: "Kanit";
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
+  margin-bottom: 1rem;
 }
 .Section_5 .container_5 .text_5 h2 span {
   color: #9a6aff;
@@ -153,8 +287,11 @@
 .Section_5 .container_5 .text_5 p {
   font-weight: 400;
   color: rgb(184, 173, 210);
+  margin-bottom: 0.3rem;
 }
 .Section_5 .container_5 .cards_5 {
+  width: 100%;
+  max-width: 37.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -165,6 +302,7 @@
   background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
   max-width: 18.125rem;
   border-radius: 1.5rem;
+  padding: 1.5rem;
   transform: rotate(-2.36deg);
   border: 0.0625rem solid rgb(255, 178, 55);
   border-bottom: 0.1875rem solid rgb(255, 178, 55);
@@ -177,9 +315,11 @@
 }
 .Section_5 .container_5 .cards_5 .card1_5 h2 {
   color: rgb(40, 13, 95);
+  font-size: 2.5rem;
 }
 .Section_5 .container_5 .cards_5 .card1_5 p {
   color: rgb(40, 13, 95);
+  padding: 1rem 0;
 }
 .Section_5 .container_5 .cards_5 .card1_5 button {
   align-items: center;
@@ -217,9 +357,10 @@
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   max-width: 18.125rem;
   border-radius: 1.5rem;
+  padding: 1.5rem;
   transform: rotate(1.43deg);
   border: 0.0625rem solid rgb(60, 23, 134);
-  border-bottom: 0.25rem solid rgb(60, 23, 134);
+  border-bottom: 0.1875rem solid rgb(60, 23, 134);
   display: flex;
   flex-direction: column;
 }
@@ -233,9 +374,11 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
 }
 .Section_5 .container_5 .cards_5 .card2_5 p {
   color: white;
+  padding: 1rem 0;
 }
 .Section_5 .container_5 .cards_5 .card2_5 button {
   align-items: center;
@@ -271,9 +414,54 @@
 }
 
 @media screen and (max-width: 968px) {
-  .text_3 h1 {
+  #h1_section_3, #h2_section_5 {
+    font-size: 2rem;
+  }
+  .Section_5 .container_5 .cards_5 .card1_5 #jackpot-prediction {
+    font-size: 2rem;
+  }
+  .Section_5 .container_5 .cards_5 .card2_5 #jackpot-lottery {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 852px) {
+  .Section_3 .Image-Text_3 {
+    flex-direction: column;
+  }
+  .Section_3 .Image-Text_3 .text_3 {
+    order: 2;
+    max-width: 100%;
+    padding-top: 0;
+  }
+  .Section_3 .Image-Text_3 .image_3 {
+    order: 1;
+    max-width: 12rem;
+    min-height: 12rem;
+    align-self: flex-end;
+  }
+  .Section_5 .magic-cards {
+    height: 6.25rem;
+    width: 12.5rem;
+    bottom: -2.1875rem;
+  }
+  .Section_5 .biliard-balls {
+    height: 6.25rem;
+    width: 12.5rem;
+    top: -3.125rem;
+  }
+  .Section_5 .container_5 {
+    padding: 1.25rem 3.125rem;
+  }
+  .Section_5 .container_5 .cards_5 {
+    flex-direction: column;
+  }
+  .Section_5 .container_5 .cards_5 .card1_5 {
+    transform: rotate(0);
+  }
+  .Section_5 .container_5 .cards_5 .card2_5 {
+    transform: rotate(0);
+  }
+}
+/*---------------------------------------------------------------------------------FINE Sezione 3------------------------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

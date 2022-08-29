@@ -1,0 +1,167 @@
+@use './colorsModule' as color;
+@use './fontModule' as font;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.entire_section {
+    background-image: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
+    width: 100vw;
+    height: 793px;
+    justify-content: space-evenly;    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-top: 96px;
+    padding-bottom: 105px;
+
+    .svg_container {
+    margin-bottom: 24px;
+    }
+
+    .header1 {
+        font-weight: font.$fontHeavyWeight; /*fontheavyWeight*/
+        line-height: 1.1;
+        font-size: 40px;
+        color: rgb(244, 238, 255);
+        font-family: font.$fontFamily, sans-serif; /*fontFamily*/
+    }
+
+    .header2 {
+        @extend .header1;
+        margin-bottom: 32px;
+    }
+
+    .text1 {
+        color: rgb(184, 173, 210);
+        font-weight: font.$fontLightWeight; /*fontLightWeight*/
+        line-height: 1.5;
+        text-align: center;
+        font-size: 16px;
+        font-family: font.$fontFamily, sans-serif; /*fontFamily*/
+    }
+
+    .text3 {
+        @extend .text1;
+        margin-bottom: 32px;
+    }
+
+    .text2 {
+        @extend .text1;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    
+        .firstcard {
+            background: color.$mainBlack; /*mainBlack?*/
+            border-radius: 24px;
+            color: rgb(244, 238, 255);
+            overflow: hidden;
+            position: relative;
+            padding: 24px;
+            margin-bottom: 16px;
+            margin-right: 16px;
+            width: 280px;
+            height: 280px;
+            border: 0px solid;
+            border-color:rgb(55 47 71); 
+            box-shadow: 0px -5px 1px 0px inset rgb(56, 50, 65);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .svg {
+                fill: color.$mainPurple; /*mainPurple*/
+                display:flex;
+                justify-content: flex-end;
+            }
+    
+            .lower1 {
+                font-size: 40px;
+                font-weight: font.$fontHeavyWeight;  /*fontheavyWeight*/
+                line-height: 1.1;
+                font-family: font.$fontFamily, sans-serif;  /*fontFamily*/
+            }
+    
+            .lower2 {
+                color: color.$mainPurple; /*mainPurple*/
+                @extend .lower1;
+                margin-bottom: 24px;
+            }
+    
+            .lower3 {
+                @extend .lower1;
+                font-weight: font.$fontLightWeight;
+                line-height: 1.5;
+                font-size: 16px;
+                color: rgb(184, 173, 210);
+            }
+        }
+    
+        .secondcard {
+            @extend .firstcard;
+    
+            .svg {
+                fill: color.$buttonBlue; /*buttonBlue*/
+                display:flex;
+                justify-content: flex-end;
+            }
+    
+            .lower2 {
+                color: color.$buttonBlue; /*buttonBlue*/
+            }
+        }
+    
+        .thirdcard {
+            @extend .firstcard;
+            margin-right: 0px;
+    
+            .svg {
+                fill: color.$pinkColor; /*pinkColor*/
+                display:flex;
+                justify-content: flex-end;
+            }
+    
+            .lower2 {
+                color: color.$pinkColor; /*pinkColor*/
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width:850px) {
+    .entire_section {
+        height: 100vh;
+
+        .header1, .header2 {
+        font-size: 32px;
+        font-weight: font.$fontHeavyWeight; /*fontheavyWeight*/
+        line-height: 1.1;
+    } 
+    .cards {
+    flex-direction: column;
+
+        .firstcard, .secondcard, .thirdcard {            
+            height: 160px;
+            flex-direction: row-reverse;
+            
+            .lower1, .lower2 {
+                @extend .header1;
+            }
+            .lower3 {
+                font-weight: font.$fontLightWeight; /*fontLightWeight*/
+                font-size: 16px;
+            } 
+        }
+    }
+    }
+    
+}

@@ -11,25 +11,33 @@
     font-family: font.$fontFamily, sans-serif;
 }
 
-.sezione6 {
+body {
+    background-color: rgb(8, 6, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
 
-    width: function.convertpx(1278);
-    height: function.convertpx(750);
+.sezione6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(8, 6, 11);
+    justify-content: center;
+    height: 100%;
+    padding: 50px 200px;
 }
 
 .blocco1flex {
-    width: 920px;
-    height: 300px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex: 2;
 
+
     .textblocco1 {
+        max-width: 50%;
         color: #f4eeff;
         font-size: function.convertpx(30);
 
@@ -96,37 +104,44 @@
 }
 
 .imgBounce {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
     figure {
         padding-left: 50px;
         padding-bottom: 20px;
+        max-width: 50%;
+
 
         #main-img {
+            width: 400px;
             position: relative;
-            width: 320px;
             z-index: 1;
 
         }
 
         #top-left {
-            position: relative;
-            top: 230px;
-            left: 40px;
-            width: 250px;
+            width: 400px;
+            position: absolute;
+            top: 20px;
             z-index: 2;
         }
 
         #bottom-right {
-            position: relative;
-            width: 220px;
-            bottom: 230px;
-            right: 150px;
+            width: 350px;
+            position: absolute;
+            top: 100px;
+            right: 310px;
         }
 
         #top-right {
-            position: relative;
-            width: 210px;
-            top: -300px;
-            right: -100px;
+            width: 400px;
+            position: absolute;
+            top: 50px;
+            right: 250px;
         }
 
     }
@@ -135,8 +150,8 @@
 }
 
 .blocco2grid {
-    width: 920px;
-    height: 133px;
+    width: 100%;
+    height: 100%;
     flex: 1;
     display: grid;
     gap: 30px;
@@ -164,6 +179,100 @@
     border-left: 1px rgb(38, 33, 48) solid;
     height: 50%;
     padding-left: 15px;
+}
+
+@media screen and (max-width:700px) {
+    .sezione6 {
+        padding: 0;
+    }
+
+    div.blocco1flex {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column !important;
+        padding: 0 50px;
+    }
+
+    .blocco2grid {
+        padding: 30px 50px;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "quadro1 ,quadro2"
+            "quadro3, quadro4"
+            "quadro5 ,quadro6";
+    }
+
+    .imgBounce {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        order: 1;
+        padding-bottom: 30px;
+
+        figure {
+            padding-left: 50px;
+            padding-bottom: 20px;
+
+            #main-img {
+                width: 200px;
+                position: relative;
+                z-index: 1;
+
+            }
+
+            #top-left {
+                width: 200px;
+                position: absolute;
+                top: 210px;
+                left: 100px;
+                z-index: 2;
+            }
+
+            #bottom-right {
+                width: 200px;
+                position: absolute;
+                top: 240px;
+                left: 120px;
+
+            }
+
+            #top-right {
+                width: 200px;
+                position: absolute;
+                top: 230px;
+                left: 90px;
+            }
+
+        }
+
+
+    }
+
+    .textblocco1 {
+        max-width: 100% !important;
+        width: 100%;
+        order: 2;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .imgBounce {
+
+        width: 100%;
+    }
+
+
 }
 
 //alessio end

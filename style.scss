@@ -22,13 +22,23 @@ body {
 
 .sectionSix {
   background-color: #3b374b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.super-criminal {
+  min-width: 70%;
 }
 
 .img-text {
-  margin-top: function.convertpx(100px);
+  margin-top: function.convertpx(50px);
   display: flex;
   justify-content: center;
   gap: function.convertpx(40px);
+  width: 100%;
 
   .img-motion {
     display: flex;
@@ -131,10 +141,12 @@ body {
   font-size: function.convertpx(20px);
   font-weight: font.$fontHeavyWeight;
   height: function.convertpx(24px);
-  width: function.convertpx(920px);
-  margin-left: function.convertpx(330px);
+  // width: function.convertpx(920px);
+  // margin-left: function.convertpx(330px);
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: start;
   margin-top: function.convertpx(10px);
   color: #f4eeff;
 
@@ -163,12 +175,20 @@ body {
   }
 }
 
+#criminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: function.convertpx(50px);
+}
+
 .res-data {
   display: flex;
   justify-content: space-between;
-  width: function.convertpx(920px);
+  width: 100%;
   height: function.convertpx(80px);
-  margin-left: function.convertpx(330px);
   font-weight: font.$fontHeavyWeight;
   margin-top: function.convertpx(20px);
 
@@ -210,13 +230,14 @@ body {
 
 .hidden {
   display: none;
+  width: 100%;
 
   #res-data-hidden {
     display: flex;
     justify-content: space-between;
-    width: function.convertpx(920px);
+    width: 100%;
     height: function.convertpx(80px);
-    margin-left: function.convertpx(330px);
+    // padding-left: function.convertpx(40px);
     font-weight: font.$fontHeavyWeight;
     margin-top: function.convertpx(20px);
 
@@ -242,9 +263,10 @@ body {
       padding-left: function.convertpx(10px);
 
       h6 {
+        overflow-wrap: break-word !important;
         color: color.$mainPurple;
         margin-bottom: function.convertpx(8px);
-        width: max-content;
+        width: 100%;
       }
       p {
         color: #f4eeff;
@@ -258,18 +280,32 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
-  body {
+@media screen and (max-width: 840px) {
+  body,
+  html {
     overflow-x: hidden;
+  }
+
+  .super-criminal {
+    width: 100%;
   }
   .img-text {
     flex-direction: column;
-    padding-left: function.convertpx(20px);
+    padding: function.convertpx(40px);
+    padding-bottom: function.convertpx(0px);
+
+    .grand-motion {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
     .img-motion {
-      width: function.convertpx(200px);
+      // width: function.convertpx(200px);
+      min-width: 100%;
       height: function.convertpx(185px);
-      justify-content: end;
+      justify-content: flex-end;
+      margin-right: function.convertpx(350px);
     }
 
     figure {
@@ -300,12 +336,39 @@ body {
       }
     }
   }
+
+  #criminal {
+    padding-left: function.convertpx(40px);
+    padding-right: function.convertpx(40px);
+  }
   .title-res-data {
-    margin-left: function.convertpx(20px);
+    width: 100%;
+    // margin-left: function.convertpx(40px);
   }
   .res-data {
-    margin-left: function.convertpx(10px);
+    // width: 90%;
     width: 100%;
-    margin-left: function.convertpx(20px);
+    // margin-left: function.convertpx(40px);
+  }
+  #subtitle-res-data {
+    h6 {
+      width: 100% !important;
+      overflow-wrap: break-word !important;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .img-text {
+    padding-left: function.convertpx(20px);
+  }
+
+  #criminal {
+    padding-left: function.convertpx(20px);
+  }
+
+  .res-data {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }

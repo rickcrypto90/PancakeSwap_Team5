@@ -1,5 +1,5 @@
-@use './colorsModule' as color;
-@use './fontModule' as font;
+@use './css/colorsModule' as color;
+@use './css/fontModule' as font;
 
 * {
     box-sizing: border-box;

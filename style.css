@@ -240,7 +240,7 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSi
   border-radius: 50%;
   background-color: #27262c;
   position: absolute;
-  transform: translate(50%) scale(0.9);
+  transform: translate(50%) scale(0.85);
   margin: 0%;
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div {

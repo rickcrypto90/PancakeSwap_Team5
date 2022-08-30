@@ -55,10 +55,19 @@ document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('
     if(document.querySelector('body').classList.contains('dark-mode')){
         document.querySelector('body').classList.remove('dark-mode')
         gsap.to('div.leftSide > div.slider', {x: 15, duration: 0.3})
+        document.querySelector('div.bottomFooterLeft > div.leftSide').style.backgroundColor='#666171'
+        document.querySelector('div.leftSide > div.slider').style.backgroundColor='#27262c'
+        document.querySelector('div.bottomFooterLeft > div.leftSide div.nightMode img').style.filter='invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%)'
+        document.querySelector('div.bottomFooterLeft > div.leftSide div.lightMode img').style.filter='invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%)'
+
     }
     else{
         document.querySelector('body').classList.add('dark-mode')
          gsap.to('div.leftSide > div.slider', {x: -14, duration: 0.3})
+         document.querySelector('div.bottomFooterLeft > div.leftSide').style.backgroundColor='rgb(189, 194, 196)'
+         document.querySelector('div.leftSide > div.slider').style.backgroundColor='white'
+         document.querySelector('div.bottomFooterLeft > div.leftSide div.nightMode img').style.filter='invert(100%) sepia(5%) saturate(0%) hue-rotate(45deg) brightness(107%) contrast(105%)'
+         document.querySelector('div.bottomFooterLeft > div.leftSide div.lightMode img').style.filter='invert(65%) sepia(67%) saturate(496%) hue-rotate(347deg) brightness(103%) contrast(103%)'
     }
 })
 // FINE JS FOOTER - FRANCESCO

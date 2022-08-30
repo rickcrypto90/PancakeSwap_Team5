@@ -280,7 +280,7 @@ body{
                                     border-radius: 50%;
                                     background-color: #27262c;
                                     position: absolute;
-                                    transform: translate(50%) scale(0.9);
+                                    transform: translate(50%) scale(0.85);
                                     margin: 0%;
                                     }
                                 div{
@@ -294,7 +294,8 @@ body{
                                         &.lightMode{
                                             img{
                                             margin-left: function.convertpx(2px);
-                                            filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);                                            }
+                                            filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);                                            
+                                        }
                                         }  
                                 }
                             }

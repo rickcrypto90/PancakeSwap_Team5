@@ -15,6 +15,17 @@
     font-family: font.$fontFamily, sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(184, 173, 210);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: rgb(55 47 71) 0px 0px 5px inset;
+    background: color.$mainBlack;
+}
 
 body{
     section{

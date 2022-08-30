@@ -5,6 +5,20 @@
   font-family: "Kanit", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(184, 173, 210);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: rgb(55, 47, 71) 0px 0px 5px inset;
+  background: #27262c;
+}
+
 body section.sectionSeven {
   background-color: #6f3db1;
   background-image: url(./resources/assets-section7/background.svg);

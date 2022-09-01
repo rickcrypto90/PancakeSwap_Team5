@@ -310,8 +310,10 @@ let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable=
   </div>
 </div>
 </div>`;
-
-(function wallet(){document.querySelector(".connect-wallet").addEventListener("click", first)
+let buttonWallets = document.querySelectorAll(".connect-wallet")
+buttonWallets.forEach(el => {
+(
+function wallet(){el.addEventListener("click", first)
 function first(e){
     document.querySelector(".settings").innerHTML= connection
     document.querySelector(".settings").style.visibility="visible"
@@ -325,8 +327,8 @@ function first(e){
 function hide(){
     document.querySelector(".settings").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").style.visibility="visible"
-    document.querySelector(".connect-wallet").addEventListener("click", first)
-}})();
+   el.addEventListener("click", first)
+}})()});
 
 
 (function settings(){document.querySelector(".nav-right-settings").addEventListener("click", first)

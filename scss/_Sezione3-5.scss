@@ -310,6 +310,8 @@ body{
                 h2 {
                     color: rgb(40, 13, 95);
                     font-size: function.convertpx(40px);
+                    white-space: nowrap;
+                            display: flex;
                 }
                 p{
                     color: rgb(40, 13, 95);
@@ -383,6 +385,9 @@ body{
                 .card1_5 {
                     #jackpot-prediction{
                         font-size: function.convertpx(32px);
+                        
+                            
+                        
                     }
                 }
                 .card2_5 {

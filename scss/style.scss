@@ -17,3 +17,12 @@
 @use './Sezione4';
 @use './Sezione6';
 @use './Sezione7';
+
+@font-face {
+    font-family: Kanit;
+    src: url(../resources/Kanit.woff2);
+  }
+
+*{
+    font-family: Kanit !important;
+}

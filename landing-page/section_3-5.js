@@ -34,7 +34,7 @@ const counterAnim1 = (qSelector, start = 0, end, duration = 1000) => {
 };
 
 function getCounter(){
-    jackpotLottery.innerHTML = counterAnim1('#jackpot-lottery', 78000, 90000, 20000);
+    jackpotLottery.innerHTML = counterAnim1('#jackpot-lottery', 7000,  parseInt(lotteryAmount.join("")));
 }
 getCounter();
 

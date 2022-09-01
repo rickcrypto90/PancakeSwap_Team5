@@ -422,7 +422,11 @@ body > #Section_1 > main > section > .hero-timer > .hero-timer-inner > div > p {
   font-size: 40px;
   font-weight: 600;
   position: relative;
+  white-space: nowrap;
   z-index: 2;
+}
+body > #Section_1 > main > section > .hero-timer > .hero-timer-inner > div > p > span {
+  font-size: 20px;
 }
 body > #Section_1 > main > section > .hero-timer > a > button {
   align-items: center;
@@ -687,6 +691,7 @@ body > .nav-fixed-small {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+  opacity: 0;
   background-color: rgba(244, 238, 255, 0.6);
   display: flex;
   justify-content: center;

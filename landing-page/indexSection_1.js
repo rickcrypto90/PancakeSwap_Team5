@@ -41,7 +41,7 @@ let x = setInterval(function () {
     let hours = Math.floor((distance % (day)) / (hour) + ((distance / (day)) * 24)),
         minutes = Math.floor((distance % (hour)) / (minute)),
         seconds = Math.floor((distance % (minute)) / second);
-    document.querySelector("#countdown").innerHTML = `${hours} h ${minutes} m  ${seconds} s`
+    document.querySelector("#countdown").innerHTML = `${hours}<span>h</span> ${minutes}<span>m</span>  ${seconds}<span>s</span>`
     //do something later when date is reached
     //seconds
 }, 0)
@@ -315,8 +315,11 @@ buttonWallets.forEach(el => {
 (
 function wallet(){el.addEventListener("click", first)
 function first(e){
+  document.querySelector(`.settings`).style.transition = "opacity .3s";
     document.querySelector(".settings").innerHTML= connection
+    document.querySelector(".settings").style.opacity="1"
     document.querySelector(".settings").style.visibility="visible"
+    
     document.querySelector(".nav-fixed-small").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").setAttribute.visibility="hidden"
     
@@ -325,6 +328,8 @@ function first(e){
     document.onclick = hide;
 }
 function hide(){
+  document.querySelector(`.settings`).style.transition = "opacity .3s";
+  document.querySelector(".settings").style.opacity="0"
     document.querySelector(".settings").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").style.visibility="visible"
    el.addEventListener("click", first)
@@ -333,16 +338,19 @@ function hide(){
 
 (function settings(){document.querySelector(".nav-right-settings").addEventListener("click", first)
 function first(e){
+  document.querySelector(`.settings`).style.transition = "opacity .3s";
     document.querySelector(".settings").innerHTML= setting
+    document.querySelector(".settings").style.opacity="1"
     document.querySelector(".settings").style.visibility="visible"
     document.querySelector(".nav-fixed-small").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").setAttribute.visibility="hidden"
-    
     e.stopImmediatePropagation();
     this.removeEventListener("click", first);
     document.onclick = hide;
 }
 function hide(){
+  document.querySelector(`.settings`).style.transition = "opacity .3s";
+  document.querySelector(".settings").style.opacity="0"
     document.querySelector(".settings").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").style.visibility="visible"
     document.querySelector(".nav-right-settings").addEventListener("click", first)

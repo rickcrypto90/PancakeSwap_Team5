@@ -320,9 +320,11 @@ buttonWallets.forEach(el => {
     function wallet() {
       el.addEventListener("click", first)
       function first(e) {
-        document.querySelector(`.settings`).style.transition = "opacity .3s";
+        document.querySelector(`.settings`).style.transition = "opacity .5s";
         document.querySelector(".settings").innerHTML = connection
         document.querySelector(".settings").style.opacity = "1"
+        document.querySelector("body").style.overflowY= "hidden"
+
         document.querySelector(".settings").style.visibility = "visible"
 
         document.querySelector(".nav-fixed-small").style.visibility = "hidden"
@@ -333,8 +335,9 @@ buttonWallets.forEach(el => {
         document.onclick = hide;
       }
       function hide() {
-        document.querySelector(`.settings`).style.transition = "opacity .3s";
+        document.querySelector(`.settings`).style.transition = "opacity .5s";
         document.querySelector(".settings").style.opacity = "0"
+        document.querySelector("body").style.overflowY= "scroll"
         document.querySelector(".settings").style.visibility = "hidden"
         document.querySelector(".nav-fixed-small").style.visibility = "visible"
         el.addEventListener("click", first)
@@ -346,9 +349,10 @@ buttonWallets.forEach(el => {
 (function settings() {
   document.querySelector(".nav-right-settings").addEventListener("click", first)
   function first(e) {
-    document.querySelector(`.settings`).style.transition = "opacity .3s";
+    document.querySelector(`.settings`).style.transition = "opacity .5s";
     document.querySelector(".settings").innerHTML = setting
     document.querySelector(".settings").style.opacity = "1"
+    document.querySelector("body").style.overflowY= "hidden"
     document.querySelector(".settings").style.visibility = "visible"
     document.querySelector(".nav-fixed-small").style.visibility = "hidden"
     document.querySelector(".nav-fixed-small").setAttribute.visibility = "hidden"
@@ -357,9 +361,10 @@ buttonWallets.forEach(el => {
     document.onclick = hide;
   }
   function hide() {
-    document.querySelector(`.settings`).style.transition = "opacity .3s";
+    document.querySelector(`.settings`).style.transition = "opacity .5s";
     document.querySelector(".settings").style.opacity = "0"
     document.querySelector(".settings").style.visibility = "hidden"
+    document.querySelector("body").style.overflowY= "scroll"
     document.querySelector(".nav-fixed-small").style.visibility = "visible"
     document.querySelector(".nav-right-settings").addEventListener("click", first)
   }

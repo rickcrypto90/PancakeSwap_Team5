@@ -348,3 +348,9 @@ function hide(){
     document.querySelector(".nav-right-settings").addEventListener("click", first)
 }})()
 ;
+
+document.querySelector("div.nav-right-icon > a").addEventListener('mouseover', ()=>{
+  gsap.to("div.nav-right-icon > a img", {scale: 1.2, duration: .5})
+  document.querySelector("div.nav-right-icon > a").addEventListener('mouseout', ()=>{
+      gsap.to("div.nav-right-icon > a img", {scale: 1, duration: .5})})
+})

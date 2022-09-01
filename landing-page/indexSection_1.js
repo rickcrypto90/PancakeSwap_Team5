@@ -343,6 +343,6 @@ function first(e){
 function hide(){
     document.querySelector(".settings").style.visibility="hidden"
     document.querySelector(".nav-fixed-small").style.visibility="visible"
-    document.querySelector(".connect-wallet").addEventListener("click", first)
+    document.querySelector(".nav-right-settings").addEventListener("click", first)
 }})()
 ;

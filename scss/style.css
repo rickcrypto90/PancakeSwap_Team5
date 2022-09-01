@@ -1567,6 +1567,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3rem 2rem;
+  position: relative;
+  z-index: 5;
 }
 .Section_3 .Image-Text_3 {
   width: 100%;

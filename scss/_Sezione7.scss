@@ -30,6 +30,9 @@
 }
 
 body{
+    .space{
+        visibility: hidden;
+    }
     section{
         &.sectionSeven{
             background-color: #6f3db1;
@@ -446,6 +449,11 @@ body{
 }
 
 @media screen and (max-width: 575px){
+    .space{
+        height: 55px;
+        display: block !important;
+        background-color: #27262c;
+    }
     section{
         &.sectionSeven{
             div.sectionSeven-centralDiv{

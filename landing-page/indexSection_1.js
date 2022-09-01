@@ -68,8 +68,9 @@ array.forEach((element, index) => {
 
 )
 document.querySelector(".nav-right-languages-inner").addEventListener("mouseover", () => {
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.transition = "opacity .3s";
     document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "1"
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "200px"
+    document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "400px"
     
 
     document.querySelector(`.nav-right-languages-inner-dropdown`).style.overflowY = "auto"
@@ -77,7 +78,6 @@ document.querySelector(".nav-right-languages-inner").addEventListener("mouseover
 })
 document.querySelector(".nav-right-languages-inner").addEventListener("mouseout", () => {
     document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "0"
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "0px"
     
 
 })

@@ -266,11 +266,11 @@ body > #Section_1 > header > nav > .nav-right > .nav-right-languages-outer > .na
   position: absolute;
   transform: translate(-50%, 0px);
   left: 50%;
+  top: 40px;
   bottom: auto;
   background-color: rgb(39, 38, 44);
   box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
   padding: 16px;
-  max-height: 0px;
   overflow: hidden;
   z-index: 10;
   border-radius: 4px;
@@ -2689,6 +2689,9 @@ html {
   background: #27262c;
 }
 
+body .space {
+  visibility: hidden;
+}
 body section.sectionSeven {
   background-color: #6f3db1;
   background-image: url(./resources/assets-section7/background.svg);
@@ -3064,6 +3067,11 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
   }
 }
 @media screen and (max-width: 575px) {
+  .space {
+    height: 55px;
+    display: block !important;
+    background-color: #27262c;
+  }
   section.sectionSeven div.sectionSeven-centralDiv h2 {
     font-size: 1.875rem !important;
   }

@@ -142,7 +142,7 @@
 
 @media screen and (max-width:850px) {
     .entire_section {
-        height: 100vh;
+        height: fit-content;
 
         .header1, .header2 {
         font-size: 32px;

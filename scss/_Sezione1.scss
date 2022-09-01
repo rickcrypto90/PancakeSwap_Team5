@@ -591,6 +591,7 @@ body {
     &>.nav-fixed-small {
 
         visibility: hidden;
+        display: none;
     }
 }
 
@@ -682,7 +683,6 @@ body {
     body > section.nav-fixed-small {
 
         display: flex;
-
         position: fixed;
         bottom: 0;
         z-index: 1000;

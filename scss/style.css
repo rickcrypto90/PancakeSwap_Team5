@@ -560,6 +560,7 @@ body > #Section_1 > main > section > .div-moon > div > div > a > button {
 }
 body > .nav-fixed-small {
   visibility: hidden;
+  display: none;
 }
 
 @media screen and (max-width: 1080px) {
@@ -1521,7 +1522,9 @@ h2 {
 
 @media screen and (max-width: 850px) {
   .entire_section {
-    height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .entire_section .header1, .entire_section .header2 {
     font-size: 32px;
@@ -2663,5 +2666,446 @@ html {
   }
   .imgBounce {
     width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(184, 173, 210);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: rgb(55, 47, 71) 0px 0px 5px inset;
+  background: #27262c;
+}
+
+body section.sectionSeven {
+  background-color: #6f3db1;
+  background-image: url(./resources/assets-section7/background.svg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 26.75rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body section.sectionSeven div.sectionSeven-leftDiv, body section.sectionSeven div.sectionSeven-rightDiv {
+  width: 16rem;
+  height: 16rem;
+}
+body section.sectionSeven div.sectionSeven-leftDiv {
+  align-self: flex-start;
+}
+body section.sectionSeven div.sectionSeven-leftDiv img[srcset*=topPancake] {
+  top: -1.25rem;
+}
+body section.sectionSeven div.sectionSeven-rightDiv {
+  align-self: flex-end;
+}
+body section.sectionSeven div.sectionSeven-rightDiv img[srcset*=topPancake] {
+  transform: rotate(80deg);
+  top: -3.125rem;
+  right: 6.25rem;
+}
+body section.sectionSeven div.sectionSeven-rightDiv img[srcset*=midPancake] {
+  transform: rotate(-120deg);
+  left: 2.5rem;
+  width: 14.375rem;
+  height: 16.25rem;
+}
+body section.sectionSeven div.sectionSeven-rightDiv img[srcset*=bottomPancake] {
+  transform: rotate(-60deg);
+  top: 3.125rem;
+  right: 8.75rem;
+}
+body section.sectionSeven div div.topPancake, body section.sectionSeven div div.midPancake, body section.sectionSeven div div.bottomPancake {
+  position: relative;
+}
+body section.sectionSeven div div.topPancake picture img, body section.sectionSeven div div.midPancake picture img, body section.sectionSeven div div.bottomPancake picture img {
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  overflow: hidden;
+}
+body section.sectionSeven div.sectionSeven-centralDiv {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+body section.sectionSeven div.sectionSeven-centralDiv h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-family: "Kanit", sans-serif;
+  margin-bottom: 0.3125rem;
+}
+body section.sectionSeven div.sectionSeven-centralDiv p {
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
+}
+body section.sectionSeven div.sectionSeven-centralDiv p span {
+  line-height: 2;
+  font-weight: 600;
+  font-family: "Kanit", sans-serif;
+}
+body section.sectionSeven div.sectionSeven-centralDiv div:nth-child(3) a {
+  text-decoration: none;
+  color: #1FC7d4;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+}
+body section.sectionSeven div.sectionSeven-centralDiv div:nth-child(3) a:hover {
+  text-decoration: underline;
+}
+body section.sectionSeven div.sectionSeven-centralDiv button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px 1.5rem;
+  background-color: #1FC7d4;
+  color: white;
+  margin-right: 0.5rem;
+  background-color: #1FC7d4;
+}
+body section.sectionSeven div.sectionSeven-centralDiv button a {
+  text-decoration: none;
+  color: inherit;
+}
+body footer {
+  overflow-x: hidden;
+  background-color: #27262c;
+  display: flex;
+  justify-content: center;
+  height: 31.25rem;
+  width: 100%;
+}
+body footer div.footerContainer {
+  width: 75rem;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+body footer div.footerContainer div.topFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon {
+  margin-right: 2.1875rem;
+  margin-top: 1.25rem;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5625rem;
+  letter-spacing: 0.5px;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li:first-child {
+  color: #9a6aff;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li {
+  list-style-type: none;
+  transform: scale(0.9, 0.9);
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li:not(:first-child) a {
+  color: #F4EEFF;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li:not(:first-child) a:hover {
+  text-decoration: underline;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li:not(:first-child) span {
+  color: #F4EEFF;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon ul li a {
+  text-decoration: none;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon img {
+  width: 10rem;
+  height: 1.5625rem;
+}
+body footer div.footerContainer div.topFooter div.topFooterSon:first-child ul li:nth-child(2) a {
+  color: #ffb237;
+}
+body footer div.footerContainer div.midFooter {
+  display: flex;
+  gap: 1.5625rem;
+  border-bottom: 1px solid rgb(56, 50, 65);
+  padding-bottom: 2rem;
+}
+body footer div.footerContainer div.midFooter img {
+  cursor: pointer;
+}
+body footer div.footerContainer div.bottomFooter {
+  display: flex;
+  justify-content: space-between;
+}
+body footer div.footerContainer div.bottomFooter picture {
+  display: none;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide {
+  position: relative;
+  cursor: pointer;
+  background-color: #666171;
+  width: 3.75rem;
+  height: 1.875rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide:hover div.slider {
+  outline: 0.1875rem solid #7050af;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.slider {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background-color: #27262c;
+  position: absolute;
+  transform: translate(50%) scale(0.85);
+  margin: 0%;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div {
+  margin-top: 0.1875rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.nightMode img {
+  margin-left: 0.125rem;
+  filter: invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.leftSide div.lightMode img {
+  margin-left: 0.125rem;
+  filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide {
+  position: relative;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:hover div.showedSide {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:hover > div.languages {
+  visibility: visible;
+  opacity: 1;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide:focus > div.languages {
+  visibility: visible;
+  opacity: 1;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.showedSide {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.showedSide p {
+  margin-top: 2px;
+  font-weight: 600;
+  color: #b8add2;
+  transform: scale(0.8);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages {
+  position: absolute;
+  bottom: 1.875rem;
+  display: flex;
+  flex-flow: column;
+  height: 25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow-y: scroll;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  min-width: 9.875rem;
+  min-height: 2rem;
+  background-color: #27262c;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button:hover p {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #b8add2;
+  font-weight: 600;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a img {
+  margin-right: 0.3125rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.leftSide a div {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  transform: scale(0.8, 0.95);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a {
+  width: 8.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a button {
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 3rem;
+  padding: 0px 1.5rem;
+  background-color: #1FC7d4;
+  color: white;
+  margin-right: 0.5rem;
+  margin-right: 0%;
+  width: 8.75rem;
+  height: 2rem;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a button div.inButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a button div.inButton p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transform: scale(1.2, 1.2);
+}
+body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.rightSide a button div.inButton img {
+  position: absolute;
+  left: 5rem;
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 850px) {
+  section.sectionSeven div.sectionSeven-leftDiv {
+    display: none;
+  }
+  section.sectionSeven div.sectionSeven-rightDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  section.sectionSeven div.sectionSeven-centralDiv h2 {
+    font-size: 1.875rem !important;
+  }
+  section.sectionSeven div.sectionSeven-centralDiv p {
+    font-size: 0.875rem !important;
+  }
+  footer {
+    height: 59.375rem !important;
+  }
+  footer > div.footerContainer div.topFooter {
+    order: 2;
+    flex-direction: column;
+  }
+  footer > div.footerContainer div.topFooter div:last-child {
+    display: none;
+  }
+  footer > div.footerContainer div.midFooter {
+    order: 3;
+  }
+  footer > div.footerContainer div.bottomFooter {
+    order: 1;
+    flex-direction: column;
+  }
+  footer > div.footerContainer div.bottomFooter picture {
+    display: block !important;
+    width: 100%;
+    padding: 1.25rem 0px;
+  }
+  footer > div.footerContainer div.bottomFooter picture img {
+    width: 7.5rem;
+  }
+  footer > div.footerContainer div.bottomFooter div.bottomFooterRight {
+    order: 1;
+    justify-content: space-between;
+    border-top: 0.5px solid rgb(56, 50, 65);
+    padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  footer > div.footerContainer div.bottomFooter div.bottomFooterLeft {
+    order: 2;
+    justify-content: flex-start !important;
+    border-bottom: 0.5px solid rgb(56, 50, 65);
+    padding-bottom: 1.25rem;
   }
 }/*# sourceMappingURL=style.css.map */

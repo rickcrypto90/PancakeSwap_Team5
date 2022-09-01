@@ -1,12 +1,14 @@
-@use "./css/colorsModule" as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+@use './colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
 
-@use "./css/fontModule" as font; //importo il modulo dei fonts
+@use './fontModule' as font; //importo il modulo dei fonts
 
-@use "./css/functionModule" as function;
+@use './functionModule' as function;
 
-@use "./css/inputModule" as input;
+@use './inputModule' as input;
 
-@use "./css/buttons" as buttons;
+@use './buttons' as buttons;
+
+@use './cards' as card;
 
 * {
   padding: 0;

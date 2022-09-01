@@ -1,11 +1,18 @@
-@use "./colorsModule"as color;
-@use "./fontModule"as font;
-@use "./functionModule"as function;
-@use "./inputModule"as input;
-@use "./buttons"as buttons;
+@use './colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
+@use './fontModule' as font; //importo il modulo dei fonts
+
+@use './functionModule' as function;
+
+@use './inputModule' as input;
+
+@use './buttons' as buttons;
+
+@use './cards' as card;
 
 
 @use './Sezione1';
 @use './Sezione2';
 @use './Sezione3-5';
 @use './Sezione4';
+@use './Sezione6';

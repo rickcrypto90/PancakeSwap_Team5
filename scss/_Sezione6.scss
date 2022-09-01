@@ -1,0 +1,301 @@
+@use './colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+
+@use './fontModule' as font; //importo il modulo dei fonts
+
+@use './functionModule' as function;
+
+@use './inputModule' as input;
+
+@use './buttons' as buttons;
+
+@use './cards' as card;
+
+
+
+.sezione6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 50px 200px;
+}
+
+.blocco1flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 30px;
+
+
+    .textblocco1 {
+        width: 50%;
+        color: #f4eeff;
+        font-size: function.convertpx(30px);
+
+        span {
+            color: #9a6aff;
+        }
+
+        .paragrafo {
+            font-size: function.convertpx(16px);
+            color: #b8a2dd;
+            padding-top: 20px;
+            transform: scale(1, 0.9);
+            line-height: 1.5;
+
+        }
+
+        .bottone-learn {
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            button {
+                padding-top: 15px;
+                border-radius: 16px;
+                background-color: #1fc7d4;
+                color: #ffffff;
+                height: 100%;
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                opacity: 1;
+                letter-spacing: 0.03em;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding-bottom: 12px;
+                }
+
+
+            }
+
+            #learn {
+                font-size: 16px;
+                color: #1fc7d4;
+                text-decoration: none;
+                padding-left: 10px;
+            }
+
+            a#learn:hover {
+                text-decoration: underline;
+            }
+
+            button:hover {
+                background-color: #199ea7;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+.imgBounce {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    picture{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    max-width: 50%;
+    position: relative;
+
+    #main-img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+
+    }
+     
+    #top-left {
+        max-width: 90%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        width: fit-content;
+        position: absolute;
+        top: -30px;
+        left: 0;
+        z-index: 2;
+    }
+
+    #bottom-right {
+        max-width: 90%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        width: fit-content;
+        position: absolute;
+        top: -25;
+        right: 0;
+    }
+
+    #top-right {
+        max-width: 90%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        width: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+   
+    }
+}
+
+
+
+
+.blocco2grid {
+    width: 100%;
+    height: 30%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "quadro1, quadro2, quadro3"
+        "quadro4, quadro5, quadro6";
+
+    p {
+        font-size: 24px;
+        color: #f4eeff;
+        font-weight: 800;
+    }
+
+    h5 {
+        font-size: 12px;
+        color: #b8a2dd;
+    }
+
+}
+
+.quadro2,
+.quadro5,
+.quadro3,
+.quadro6 {
+    border-left: 1px rgb(38, 33, 48) solid;
+    height: 50%;
+    padding-left: 15px;
+}
+
+///RESPONSIVE
+@media screen and (max-width:852px) {
+    body {
+        min-height: 100vh !important;
+    }
+
+    .sezione6 {
+        padding: 0;
+        margin-right: 30px !important;
+    }
+
+    div.blocco1flex {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column !important;
+        padding: 0 50px;
+
+    }
+
+    .blocco2grid {
+        padding: 30px 50px;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "quadro1 ,quadro2"
+            "quadro3, quadro4"
+            "quadro5 ,quadro6";
+    }
+
+    .imgBounce {
+        max-height: 500px !important;
+        max-width: 500px !important;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-self: flex-end;
+        flex-wrap: wrap;
+        order: 1;
+        padding-bottom: 30px;
+
+        figure {
+            padding-left: 50px;
+            padding-bottom: 20px;
+
+            #main-img {
+                width: 200px;
+                position: relative;
+                z-index: 1;
+
+            }
+
+            #top-left {
+                width: 200px;
+                position: absolute;
+                top: 210px;
+                left: 100px;
+                z-index: 2;
+            }
+
+            #bottom-right {
+                width: 200px;
+                position: absolute;
+                top: 240px;
+                left: 120px;
+
+            }
+
+            #top-right {
+                width: 200px;
+                position: absolute;
+                top: 230px;
+                left: 90px;
+            }
+
+        }
+
+
+    }
+
+    .textblocco1 {
+        width: 100% !important;
+        height: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    .imgBounce {
+
+        width: 100%;
+    }
+
+
+}
+
+//alessio end

@@ -10,32 +10,47 @@
 
 @use './cards' as card;
 
-
-
-.sezione6 {
+.sezione6-wrapper{
+    position: relative;
+    z-index: 50;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
     height: 100%;
+    max-height:  750px;
     width: 100%;
-    padding: 50px 200px;
+}
+
+.sezione6 {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    max-height:  750px;
+    width: 100%;
 }
 
 .blocco1flex {
 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 70%;
+    max-width: 1100px;
     margin-bottom: 30px;
 
 
     .textblocco1 {
-        width: 50%;
+        width: 35%;
         color: #f4eeff;
-        font-size: function.convertpx(30px);
+        font-size: 2rem;
 
         span {
             color: #9a6aff;
@@ -57,22 +72,23 @@
             align-items: center;
 
             button {
-                padding-top: 15px;
-                border-radius: 16px;
-                background-color: #1fc7d4;
-                color: #ffffff;
-                height: 100%;
-                width: 25%;
-                display: flex;
-                justify-content: center;
-                box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
-                opacity: 1;
-                letter-spacing: 0.03em;
+                @include buttons.button;
+                // padding-top: 15px;
+                // border-radius: 16px;
+                // background-color: #1fc7d4;
+                // color: #ffffff;
+                // height: 100%;
+                // width: 25%;
+                // display: flex;
+                // justify-content: center;
+                // box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                // opacity: 1;
+                // letter-spacing: 0.03em;
 
                 p {
                     font-size: 16px;
                     font-weight: 600;
-                    padding-bottom: 12px;
+                  
                 }
 
 
@@ -100,18 +116,19 @@
 }
 
 .imgBounce {
+    
     height: 100%;
     width: 50%;
     display: flex;
     picture{
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     padding-left: 50px;
     padding-bottom: 20px;
-    max-width: 50%;
+    
     position: relative;
 
     #main-img {
@@ -166,8 +183,10 @@
 
 
 .blocco2grid {
+    max-width: 1200px;
     width: 100%;
     height: 30%;
+    text-align: center;
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, auto);

@@ -18,7 +18,7 @@ const jackpotLottery = document.getElementById('jackpot-lottery');
 
 
 
-const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+const counterAnim1 = (qSelector, start = 0, end, duration = 1000) => {
     let internationalNumberFormat = new Intl.NumberFormat('en-US')
     const target = document.querySelector(qSelector);
     let startTimestamp = null;
@@ -34,7 +34,7 @@ const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
 };
 
 function getCounter(){
-    jackpotLottery.innerHTML = counterAnim('#jackpot-lottery', 78000, 90000, 20000);
+    jackpotLottery.innerHTML = counterAnim1('#jackpot-lottery', 78000, 90000, 20000);
 }
 getCounter();
 

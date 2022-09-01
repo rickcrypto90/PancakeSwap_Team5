@@ -1,7 +1,7 @@
 //animazione
-let tl = gsap.timeline({ repeat: -1, yoyo: true });
+let tl1 = gsap.timeline({ repeat: -1, yoyo: true });
 
-let animazione = tl.to("#main-img", { y: 25, x: 18, duration: 1.5, stagger: 0.2, ease: "power0.inOut" })
+let animazione = tl1.to("#main-img", { y: 25, x: 18, duration: 1.5, stagger: 0.2, ease: "power0.inOut" })
     .to("#top-right", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
     .to("#top-left", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
     .to("#bottom-right", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
@@ -11,7 +11,7 @@ async function getApi() {
     let response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=150&page=1&sparkline=false&price_change_percentage=10s')
     let fetchApi = await response.json()
     let pancakeData = fetchApi.find(elem => elem.id === 'pancakeswap-token')
-    console.log(pancakeData);
+   
     return pancakeData;
 }
 
@@ -26,9 +26,7 @@ function updateData() {
             else if (p.id === "total_supply") {
                 p.innerHTML = counterAnim("#total_supply", 10, pancakeData[key], 1000);
             }
-            // else {
-            //     console.log('Error! no dom elem with this id: ' + key);
-            // }
+        
         }
         let marketCap = document.getElementById('market_cap');
         marketCap.innerHTML = `$${Math.round(pancakeData.market_cap)

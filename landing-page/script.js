@@ -1,6 +1,6 @@
 let tl = gsap.timeline({ repeat: -1, yoyo: true });
 
-let animazione = tl
+let animazione1 = tl
   .to("figure", {
     y: 15,
     x: 5,

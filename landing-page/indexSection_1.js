@@ -48,7 +48,7 @@ let x = setInterval(function () {
 // DROPDOWN
 let array = document.querySelectorAll(".nav-left-inner-links-outer-block-link");
 array.forEach((element, index) => {
-    console.log(index)
+    
     element.addEventListener("mouseover", () => {
         document.querySelector(`.drop-${index}`).style.visibility = "visible"
 

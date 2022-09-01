@@ -1,12 +1,8 @@
-@use "../css/colorsModule"as color;
-
-@use "../css/fontModule"as font;
-
-@use "../css/functionModule"as function;
-
-@use "../css/inputModule"as input;
-
-@use "../css/buttons"as buttons;
+@use "./colorsModule"as color;
+@use "./fontModule"as font;
+@use "./functionModule"as function;
+@use "./inputModule"as input;
+@use "./buttons"as buttons;
 
 @mixin phishingclose {
 

@@ -1,12 +1,12 @@
-@use 'colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
+@use './colorsModule' as color; //importo il modulo dei colori rinominandolo "color" per quando bisognerà richiamarlo
 
-@use 'fontModule' as font; //importo il modulo dei fonts
+@use './fontModule' as font; //importo il modulo dei fonts
 
-@use 'functionModule' as function;
+@use './functionModule' as function;
 
 @use 'inputModule' as input;
 
-@use 'buttons' as buttons;
+@use './buttons' as buttons;
 
 
 @mixin DivColorShow($color) {

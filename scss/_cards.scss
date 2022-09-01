@@ -1,4 +1,4 @@
-@use 'functionModule' as function;
+@use './functionModule' as function;
 
 @mixin card {
     width: convertpx(300px);

@@ -72,6 +72,7 @@ document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('
 document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('click',()=>{
 if(document.querySelector('body').classList.contains('darkmode')){
     document.querySelector('body').classList.remove('darkmode');
+    document.querySelectorAll('.star').forEach(el => el.style.visibility = 'visible');
     document.querySelector('#waveBGdark').style.display = 'block';
     document.querySelector('#waveBGlight').style.display = 'none';
     document.querySelector('#whiteLogo').style.display = 'block';
@@ -79,6 +80,7 @@ if(document.querySelector('body').classList.contains('darkmode')){
 }
 else{
     document.querySelector('body').classList.add('darkmode');
+    document.querySelectorAll('.star').forEach(el => el.style.visibility = 'hidden');
     document.querySelector('#waveBGdark').style.display = 'none';
     document.querySelector('#waveBGlight').style.display = 'block';
     document.querySelector('#whiteLogo').style.display = 'none';

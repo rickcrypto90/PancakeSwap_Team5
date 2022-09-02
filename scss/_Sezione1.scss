@@ -220,6 +220,12 @@ body {
                                         padding-left: 16px;
                                         padding-right: 16px;
                                         width: 100%;
+                                        &>div{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            width: 100%;
+                                           
+                                        }
 
                                         &:hover:not(:disabled) {
                                             background-color: rgb(53, 53, 71);
@@ -578,13 +584,22 @@ body {
 
                             &>button {
                                 @include buttons.button;
+                                position: relative;
+                                z-index: 200;
                             }
 
                             &>a>button {
                                 @include buttons.button;
                                 background-color: transparent;
+                                position: relative;
+                                z-index: 200;
                                 color: color.$buttonBlue;
+                                border: 2px solid rgb(31, 199, 212);
                                 font-weight: bold;
+                            }
+                            &>button:hover{
+                                opacity: 0.6 !important;
+                                transition: 0.3s !important;
                             }
                         }
                     }

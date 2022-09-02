@@ -199,6 +199,11 @@ body > #Section_1 > header > nav > .nav-left > .nav-left-inner-links > .nav-left
   padding-right: 16px;
   width: 100%;
 }
+body > #Section_1 > header > nav > .nav-left > .nav-left-inner-links > .nav-left-inner-links-outer-block > .nav-left-inner-links-outer-block-link-dropdown > .nav-left-inner-links-outer-block-link-dropdown-link > a > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 body > #Section_1 > header > nav > .nav-left > .nav-left-inner-links > .nav-left-inner-links-outer-block > .nav-left-inner-links-outer-block-link-dropdown > .nav-left-inner-links-outer-block-link-dropdown-link > a:hover:not(:disabled) {
   background-color: rgb(53, 53, 71);
 }
@@ -543,6 +548,8 @@ body > #Section_1 > main > section > .div-moon > div > div > button {
   background-color: #1FC7d4;
   color: white;
   margin-right: 0.5rem;
+  position: relative;
+  z-index: 200;
 }
 body > #Section_1 > main > section > .div-moon > div > div > a > button {
   align-items: center;
@@ -566,8 +573,15 @@ body > #Section_1 > main > section > .div-moon > div > div > a > button {
   color: white;
   margin-right: 0.5rem;
   background-color: transparent;
+  position: relative;
+  z-index: 200;
   color: #1FC7d4;
+  border: 2px solid rgb(31, 199, 212);
   font-weight: bold;
+}
+body > #Section_1 > main > section > .div-moon > div > div > button:hover {
+  opacity: 0.6 !important;
+  transition: 0.3s !important;
 }
 body > .nav-fixed-small {
   visibility: hidden;

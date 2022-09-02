@@ -253,14 +253,13 @@ body > #Section_1 > header > nav > .nav-right > .nav-right-languages-outer > .na
   display: flex;
   flex-direction: column;
   position: absolute;
-  transform: translate(-50%, 0px);
-  left: 50%;
+  transform: scaleY(0);
+  left: -150%;
   top: 40px;
   bottom: auto;
   background-color: rgb(39, 38, 44);
   box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
   padding: 16px;
-  overflow: hidden;
   z-index: 10;
   border-radius: 4px;
   opacity: 0;
@@ -367,6 +366,12 @@ body > #Section_1 > main > section {
   gap: 2rem 0;
   padding: 0 6.25rem;
 }
+body > #Section_1 > main > section > #timer-1 {
+  display: flex;
+}
+body > #Section_1 > main > section > #timer-2 {
+  display: none;
+}
 body > #Section_1 > main > section > .hero-timer {
   background-color: rgb(105, 67, 195);
   border-radius: 30px;
@@ -378,12 +383,23 @@ body > #Section_1 > main > section > .hero-timer {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  transition: opacity 1s;
+}
+body > #Section_1 > main > section > .hero-timer > #hero-perpetual {
+  color: rgb(255, 178, 55);
+  font-size: 24px;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+}
+body > #Section_1 > main > section > .hero-timer > #hero-leva {
+  font-size: 40px;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 body > #Section_1 > main > section > .hero-timer > h2 {
   color: #fff;
   font-size: 20px;
   position: relative;
   z-index: 2;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 body > #Section_1 > main > section > .hero-timer > .hero-timer-inner {
   background-color: rgba(40, 13, 95, 0.4352941176);
@@ -443,6 +459,9 @@ body > #Section_1 > main > section > .hero-timer > a > button {
 body > #Section_1 > main > section > .hero-timer > .hero-timer-img {
   position: relative;
   z-index: 1;
+}
+body > #Section_1 > main > section > .hero-timer > .hero-timer-img > #perpetual1 {
+  width: 35%;
 }
 body > #Section_1 > main > section > .hero-timer > .hero-timer-img img {
   position: absolute;
@@ -665,6 +684,12 @@ body > .nav-fixed-small {
   }
   main {
     padding: 0px 30px;
+  }
+  main .main-section-hero .hero-timer > #hero-leva {
+    font-size: 20px !important;
+  }
+  main .main-section-hero .hero-timer .hero-timer-img > #perpetual2 {
+    min-width: 150px;
   }
   main .main-section-hero .hero-timer .hero-timer-img img:last-of-type {
     visibility: visible;
@@ -3105,4 +3130,9 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
 }
 * {
   font-family: Kanit !important;
+}
+
+button:hover {
+  opacity: 0.6 !important;
+  transition: 0.3s !important;
 }/*# sourceMappingURL=style.css.map */

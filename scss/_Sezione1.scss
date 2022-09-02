@@ -293,8 +293,8 @@ body {
                                 display: flex;
                                 flex-direction: column;
                                 position: absolute;
-                                transform: translate(-50%, 0px);
-                                left: 50%;
+                                transform: scaleY(0);
+                                left: -150%;
                                 top: 40px;
                                 bottom: auto;
                                 background-color: rgb(39, 38, 44);
@@ -302,7 +302,7 @@ body {
                                     rgba(25, 19, 38, 0.05) 0px 1px 1px;
                                 padding: 16px;
                                 
-                                overflow: hidden;
+                                
                                 z-index: 10;
                                 border-radius: 4px;
                                 opacity: 0;
@@ -423,7 +423,12 @@ body {
                 align-items: center;
                 gap: 2rem 0;
                 padding: 0 function.convertpx(100px);
-
+                &>#timer-1{
+                    display: flex;
+                }
+                &>#timer-2{
+                    display: none;
+                }
                 &>.hero-timer {
                     background-color: rgb(105, 67, 195);;
                     border-radius: 30px;
@@ -435,12 +440,24 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     position: relative;
+                    transition :opacity 1s;
+
+                    &>#hero-perpetual{
+                        color: rgb(255, 178, 55);
+                        font-size: 24px;
+                        text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+                    }
+                    &>#hero-leva{
+                        font-size: 40px;
+                        text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+                    }
 
                     &>h2 {
                         color: #fff;
                         font-size: 20px;
                         position: relative;
                         z-index: 2;
+                        text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
                     }
 
                     &>.hero-timer-inner {
@@ -488,7 +505,9 @@ body {
                     &>.hero-timer-img {
                         position: relative;
                         z-index: 1;
-
+                        &>#perpetual1{
+                            width: 35%;
+                        }
                         img {
                             position: absolute;
                             height: auto;
@@ -740,11 +759,17 @@ body {
         .main-section-hero {
 
             .hero-timer {
+                &>#hero-leva{
+                    font-size: 20px !important;
+                }
 
                 .hero-timer-img {
 
 
-
+                    &>#perpetual2{
+                       min-width: 150px;
+                        
+                    }
                     img:last-of-type {
                         visibility: visible;
                         padding-top: 50px;

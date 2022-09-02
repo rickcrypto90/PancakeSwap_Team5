@@ -2,28 +2,30 @@
 
 gsap.to(".bunny-img", { repeat: -1, yoyo: true, y: 7, x: 4, duration: 1.5, ease: "power1.inOut" })
 document.querySelectorAll(".star").forEach((element, index) => {
-    gsap.timeline({
-        repeat: -1,
-        yoyo: true,
-        delay: index / 2
-    })
-        .to(
-            element,
-            {
-                opacity: 1,
-                duration: 1
-            }
-        )
+  gsap.timeline({
+    repeat: -1,
+    yoyo: true,
+    delay: index / 2
+  })
+    .to(
+      element,
+      {
+        opacity: 1,
+        duration: 1
+      }
+    )
 })
 
 // CLOSE PHISHING BUTTON
 const closePhishing = document.querySelectorAll(".phishing-close");
 localStorage.getItem("phishing-close") ? document.querySelector(".phishing-div").remove()
-    :
-    closePhishing.forEach(element=> {element.addEventListener("click", () => {
-        document.querySelector(".phishing-div").remove();
-        localStorage.setItem("phishing-close", true);
-    })})
+  :
+  closePhishing.forEach(element => {
+    element.addEventListener("click", () => {
+      document.querySelector(".phishing-div").remove();
+      localStorage.setItem("phishing-close", true);
+    })
+  })
 // TIMER LOTTERY
 const second = 1000;
 let minute = second * 60;
@@ -35,56 +37,58 @@ let lottery = "Sep 06, 2022 00:00:00";
 let countDown = new Date(lottery).getTime();
 let x = setInterval(function () {
 
-    let now = new Date().getTime(),
-        distance = countDown - now;
+  let now = new Date().getTime(),
+    distance = countDown - now;
 
-    let hours = Math.floor((distance % (day)) / (hour) + ((distance / (day)) * 24)),
-        minutes = Math.floor((distance % (hour)) / (minute)),
-        seconds = Math.floor((distance % (minute)) / second);
-    document.querySelector("#countdown").innerHTML = `${hours}<span>h</span> ${minutes}<span>m</span>  ${seconds}<span>s</span>`
-    //do something later when date is reached
-    //seconds
+  let hours = Math.floor((distance % (day)) / (hour) + ((distance / (day)) * 24)),
+    minutes = Math.floor((distance % (hour)) / (minute)),
+    seconds = Math.floor((distance % (minute)) / second);
+  document.querySelector("#countdown").innerHTML = `${hours}<span>h</span> ${minutes}<span>m</span>  ${seconds}<span>s</span>`
+  //do something later when date is reached
+  //seconds
 }, 0)
 // DROPDOWN
 let array = document.querySelectorAll(".nav-left-inner-links-outer-block-link");
 array.forEach((element, index) => {
-    
-    element.addEventListener("mouseover", () => {
-        document.querySelector(`.drop-${index}`).style.visibility = "visible"
+
+  element.addEventListener("mouseover", () => {
+    document.querySelector(`.drop-${index}`).style.visibility = "visible"
 
 
-    })
-    element.addEventListener("mouseout", () => {
-        document.querySelector(`.drop-${index}`).style.visibility = "hidden"
+  })
+  element.addEventListener("mouseout", () => {
+    document.querySelector(`.drop-${index}`).style.visibility = "hidden"
 
 
-    })
-    document.querySelector(`.drop-${index}`).addEventListener("mouseover", () => {
-        document.querySelector(`.drop-${index}`).style.visibility = "visible"
+  })
+  document.querySelector(`.drop-${index}`).addEventListener("mouseover", () => {
+    document.querySelector(`.drop-${index}`).style.visibility = "visible"
 
 
-    })
+  })
 }
 
 )
 document.querySelector(".nav-right-languages-inner").addEventListener("mouseover", () => {
   document.querySelector(`.nav-right-languages-inner-dropdown`).style.transition = "opacity .3s";
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "1"
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "400px"
-    
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "1"
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "400px"
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.transform= "scaleY(1)"
 
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.overflowY = "auto"
+
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.overflowY = "auto"
 
 })
 document.querySelector(".nav-right-languages-inner").addEventListener("mouseout", () => {
-    document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "0"
-    
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.opacity = "0"
+  document.querySelector(`.nav-right-languages-inner-dropdown`).style.maxHeight = "0"
+
 
 })
 let lotteryAmount = []
-for(let i = 0; i < 6; i++) {
-    let number = Math.floor(Math.random() *5)
-    lotteryAmount.push(number)
+for (let i = 0; i < 6; i++) {
+  let number = Math.floor(Math.random() * 5)
+  lotteryAmount.push(number)
 }
 document.querySelector('.lotteryamount').innerHTML = `Win ${parseInt(lotteryAmount.join("")).toLocaleString("it-IT")}$ in Lottery`
 
@@ -312,53 +316,80 @@ let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable=
 </div>`;
 let buttonWallets = document.querySelectorAll(".connect-wallet")
 buttonWallets.forEach(el => {
-(
-function wallet(){el.addEventListener("click", first)
-function first(e){
-  document.querySelector(`.settings`).style.transition = "opacity .3s";
-    document.querySelector(".settings").innerHTML= connection
-    document.querySelector(".settings").style.opacity="1"
-    document.querySelector(".settings").style.visibility="visible"
-    
-    document.querySelector(".nav-fixed-small").style.visibility="hidden"
-    document.querySelector(".nav-fixed-small").setAttribute.visibility="hidden"
-    
+  (
+    function wallet() {
+      el.addEventListener("click", first)
+      function first(e) {
+        document.querySelector(`.settings`).style.transition = "opacity .5s";
+        document.querySelector(".settings").innerHTML = connection
+        document.querySelector(".settings").style.opacity = "1"
+        document.querySelector("body").style.overflowY= "hidden"
+
+        document.querySelector(".settings").style.visibility = "visible"
+
+        document.querySelector(".nav-fixed-small").style.visibility = "hidden"
+        document.querySelector(".nav-fixed-small").setAttribute.visibility = "hidden"
+
+        e.stopImmediatePropagation();
+        this.removeEventListener("click", first);
+        document.onclick = hide;
+      }
+      function hide() {
+        document.querySelector(`.settings`).style.transition = "opacity .5s";
+        document.querySelector(".settings").style.opacity = "0"
+        document.querySelector("body").style.overflowY= "scroll"
+        document.querySelector(".settings").style.visibility = "hidden"
+        document.querySelector(".nav-fixed-small").style.visibility = "visible"
+        el.addEventListener("click", first)
+      }
+    })()
+});
+
+
+(function settings() {
+  document.querySelector(".nav-right-settings").addEventListener("click", first)
+  function first(e) {
+    document.querySelector(`.settings`).style.transition = "opacity .5s";
+    document.querySelector(".settings").innerHTML = setting
+    document.querySelector(".settings").style.opacity = "1"
+    document.querySelector("body").style.overflowY= "hidden"
+    document.querySelector(".settings").style.visibility = "visible"
+    document.querySelector(".nav-fixed-small").style.visibility = "hidden"
+    document.querySelector(".nav-fixed-small").setAttribute.visibility = "hidden"
     e.stopImmediatePropagation();
     this.removeEventListener("click", first);
     document.onclick = hide;
-}
-function hide(){
-  document.querySelector(`.settings`).style.transition = "opacity .3s";
-  document.querySelector(".settings").style.opacity="0"
-    document.querySelector(".settings").style.visibility="hidden"
-    document.querySelector(".nav-fixed-small").style.visibility="visible"
-   el.addEventListener("click", first)
-}})()});
-
-
-(function settings(){document.querySelector(".nav-right-settings").addEventListener("click", first)
-function first(e){
-  document.querySelector(`.settings`).style.transition = "opacity .3s";
-    document.querySelector(".settings").innerHTML= setting
-    document.querySelector(".settings").style.opacity="1"
-    document.querySelector(".settings").style.visibility="visible"
-    document.querySelector(".nav-fixed-small").style.visibility="hidden"
-    document.querySelector(".nav-fixed-small").setAttribute.visibility="hidden"
-    e.stopImmediatePropagation();
-    this.removeEventListener("click", first);
-    document.onclick = hide;
-}
-function hide(){
-  document.querySelector(`.settings`).style.transition = "opacity .3s";
-  document.querySelector(".settings").style.opacity="0"
-    document.querySelector(".settings").style.visibility="hidden"
-    document.querySelector(".nav-fixed-small").style.visibility="visible"
+  }
+  function hide() {
+    document.querySelector(`.settings`).style.transition = "opacity .5s";
+    document.querySelector(".settings").style.opacity = "0"
+    document.querySelector(".settings").style.visibility = "hidden"
+    document.querySelector("body").style.overflowY= "scroll"
+    document.querySelector(".nav-fixed-small").style.visibility = "visible"
     document.querySelector(".nav-right-settings").addEventListener("click", first)
-}})()
-;
+  }
+})()
+  ;
 
-document.querySelector("div.nav-right-icon > a").addEventListener('mouseover', ()=>{
-  gsap.to("div.nav-right-icon > a img", {scale: 1.2, duration: .5})
-  document.querySelector("div.nav-right-icon > a").addEventListener('mouseout', ()=>{
-      gsap.to("div.nav-right-icon > a img", {scale: 1, duration: .5})})
+document.querySelector("div.nav-right-icon > a").addEventListener('mouseover', () => {
+  gsap.to("div.nav-right-icon > a img", { scale: 1.2, duration: .5 })
+  document.querySelector("div.nav-right-icon > a").addEventListener('mouseout', () => {
+    gsap.to("div.nav-right-icon > a img", { scale: 1, duration: .5 })
+  })
 })
+
+// ANIMATION HERO
+let timers = document.querySelectorAll(".hero-timer");
+let check= 0;
+setInterval(() => {
+  timers[check].style.display = "none"
+ if(check===1){
+  timers[check].style.display = "none"
+  gsap.fromTo(timers[check-1], {opacity: 0}, {opacity: 1, duration: .1})
+  timers[check-1].style.display = "flex"
+  check--;}
+  else{
+    gsap.fromTo(timers[check+1], {opacity: 0}, {opacity: 1, duration: .1});
+    timers[check+1].style.display = "flex"
+    check++
+  }},7000)

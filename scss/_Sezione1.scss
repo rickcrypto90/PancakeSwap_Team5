@@ -41,7 +41,8 @@
 }
 
 body {
-    &>#Section_1 {
+    &>#Section_1 { 
+        margin-bottom: -1px;
         &>header {
             &>.phishing-div {
                 height: function.convertpx(70px);
@@ -408,7 +409,7 @@ body {
             background: radial-gradient(103.12% 50% at 50% 50%,
                     rgb(33, 25, 58) 0%,
                     rgb(25, 19, 38) 100%);
-            padding: function.convertpx(48px) 0;
+            padding: function.convertpx(48px) 0 function.convertpx(70px) 0;
             display: flex;
             flex-direction: column;
             align-items: center;

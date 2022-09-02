@@ -6,6 +6,9 @@
   text-decoration: none;
 }
 
+body > #Section_1 {
+  margin-bottom: -1px;
+}
 body > #Section_1 > header > .phishing-div {
   height: 4.375rem;
   min-height: 4.375rem;
@@ -349,7 +352,7 @@ body > #Section_1 > header > nav > .nav-right > button > div.mobile {
 }
 body > #Section_1 > main {
   background: radial-gradient(103.12% 50% at 50% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
-  padding: 3rem 0;
+  padding: 3rem 0 4.375rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1376,6 +1379,20 @@ h2 {
   padding: 0px;
 }
 
+#gradient-section2-3 {
+  width: 100vw;
+  height: 80px;
+  background: linear-gradient(to bottom left, rgb(32, 19, 53) 49%, rgb(8, 6, 11) 51%);
+  margin: -2px 0 -2px 0;
+}
+
+#gradient-section3-4 {
+  width: 100vw;
+  height: 80px;
+  background: linear-gradient(to bottom right, rgb(8, 6, 11) 49%, #3b374b 51%);
+  margin: -2px 0 -2px 0;
+}
+
 .entire_section {
   background-image: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
   width: 100vw;
@@ -1479,6 +1496,12 @@ h2 {
 }
 
 @media screen and (max-width: 850px) {
+  #gradient-section2-3 {
+    height: 50px;
+  }
+  #gradient-section3-4 {
+    height: 50px;
+  }
   .entire_section {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -2008,7 +2031,6 @@ body {
 }
 
 .img-text {
-  margin-top: 3.125rem;
   display: flex;
   justify-content: center;
   gap: 0.625rem;

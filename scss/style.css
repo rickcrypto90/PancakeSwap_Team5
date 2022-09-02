@@ -648,7 +648,7 @@ body > .nav-fixed-small {
     align-self: flex-end;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   section.nav-fixed-small {
     display: flex;
     position: fixed;

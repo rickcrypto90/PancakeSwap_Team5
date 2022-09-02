@@ -234,9 +234,9 @@ let connection = `
 
 `
 let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable="false" style="max-width: 420px; user-select: none; touch-action: pan-x;">
-<div class="sc-2382db41-0 eHwgEU">
+<div class="sc-2382db41-0 eHwgEU" id="settingsTopBG">
   <div class="sc-de7e8801-1 sc-1080dffc-0 sc-2382db41-1 dUUCVU bHahRd kCFpxD">
-    <h2 color="text" font-size="16px" class="sc-118b6623-0 sc-82ba446f-0 emDKWM fxrqCO">Settings</h2>
+    <h2 id="cristo" font-size="16px" class="sc-118b6623-0 sc-82ba446f-0 emDKWM fxrqCO">Settings</h2>
   </div>
   <button class="sc-ee37452c-0 elea-dO sc-6498c20f-0 jodCDD" aria-label="Close the dialog" scale="md">
     <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-8a800401-0 exdUOd">
@@ -244,12 +244,12 @@ let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable=
     </svg>
   </button>
 </div>
-<div class="sc-de7e8801-1 sc-1080dffc-0 sc-2382db41-2 izRJVO bHahRd cLxufJ">
+<div class="sc-de7e8801-1 sc-1080dffc-0 sc-2382db41-2 izRJVO bHahRd cLxufJ" id="settingsBG">
   <div class="sc-de7e8801-1 sc-1080dffc-0 sc-6fa1b10a-0 dUUCVU bHahRd eJMZsd">
     <div class="sc-de7e8801-1 sc-1080dffc-0 jAfYRQ gcGTlB">
       <div font-size="18px" color="secondary" class="sc-118b6623-0 dnmBKn">Global</div>
       <div class="sc-de7e8801-1 sc-1080dffc-0 gBIRXf bQofKN">
-        <div color="text" font-size="16px" class="sc-118b6623-0 bXycjW">Dark mode</div>
+        <div color="text" font-size="16px" class="sc-118b6623-0 bXycjW" id='cristo'>Dark mode</div>
         <div scale="md" class="sc-4f954c25-2 dLafqe">
           <input scale="md" type="checkbox" class="sc-4f954c25-1 kikPQT" checked="">
           <div scale="md" class="sc-4f954c25-0 bqyozG">
@@ -279,7 +279,7 @@ let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable=
       </div>
       <div class="sc-de7e8801-1 sc-1080dffc-0 gBIRXf bBjjPN">
         <div class="sc-de7e8801-1 sc-1080dffc-0 dUUCVU cdKJAR">
-          <div color="text" font-size="16px" class="sc-118b6623-0 bXycjW">Subgraph Health Indicator</div>
+          <div id='cristo' font-size="16px" class="sc-118b6623-0 bXycjW">Subgraph Health Indicator</div>
           <div class="sc-de7e8801-1 kfpxoh">
             <div class="sc-33f7e757-0 DmODg">
               <svg viewBox="0 0 24 24" color="textSubtle" width="16px" xmlns="http://www.w3.org/2000/svg" class="sc-8a800401-0 bmlywH">
@@ -294,7 +294,7 @@ let setting = `<div class="sc-de7e8801-0 sc-2382db41-3 kZEPZp hIAkVp" draggable=
         </div>
       </div>
       <div class="sc-de7e8801-1 sc-1080dffc-0 dUUCVU gcGTlB">
-        <div class="sc-de7e8801-1 sc-1080dffc-0 bqKGfi cdKJAR">
+        <div class="sc-de7e8801-1 sc-1080dffc-0 bqKGfi cdKJAR" id='cristo'>
           <div color="text" font-size="16px" class="sc-118b6623-0 bXycjW">Default Transaction Speed (GWEI)</div>
           <div class="sc-de7e8801-1 kfpxoh">
             <div class="sc-33f7e757-0 DmODg">
@@ -356,6 +356,16 @@ buttonWallets.forEach(el => {
     document.querySelector(".settings").style.visibility = "visible"
     document.querySelector(".nav-fixed-small").style.visibility = "hidden"
     document.querySelector(".nav-fixed-small").setAttribute.visibility = "hidden"
+    if(document.querySelector('body').classList.contains('darkmode')){
+      document.querySelector('#cristo').style.color = "rgb(40, 13, 95)"
+      document.querySelector('#settingsTopBG').style.background = "linear-gradient(111.68deg, rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%)"
+      document.querySelector('#settingsBG').style.background = 'white'
+    }
+    else{
+      document.querySelector('#cristo').style.color = "white"
+      document.querySelector('#settingsTopBG').style.background = "linear-gradient(166.77deg, rgb(59, 65, 85) 0%, rgb(58, 48, 69) 100%) !important"
+      document.querySelector('#settingsBG').style.background = 'rgb(39, 38, 44)'
+    }
     e.stopImmediatePropagation();
     this.removeEventListener("click", first);
     document.onclick = hide;

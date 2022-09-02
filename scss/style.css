@@ -1,9 +1,62 @@
+:root {
+  --section6-bg: black;
+  --section6-text: #f4eeff;
+  --section5-gradient: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+  --section5-transparent-bg: rgba(8, 6, 11, 0.6);
+  --section4-bg: #3b374b;
+  --section3-bg: rgb(8, 6, 11);
+  --section2-bg: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
+  --section2-bg-bottomline: rgb(32, 19, 53);
+  --section2-cards-bg: rgb(39, 38, 44);
+  --section2-cards-shadow: rgb(56, 50, 65);
+  --section1-main-bg: radial-gradient(103.12% 50% at 50% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+  --scrollbar-track: rgb(39, 38, 44);
+  --scrollbar-thumb: rgb(184, 173, 210);
+  --scrollbar-shadow: rgb(55 47 71);
+  --section1-nav-bg: rgb(39, 38, 44);
+  --section1-nav-border: rgb(56, 50, 65);
+  --section1-settings-button: rgb(53, 53, 71);
+  --section1-button-bg: #372f47;
+  --section1-wallet-bg: linear-gradient(139.73deg, rgb(49, 61, 92) 0%, rgb(61, 42, 84) 100%);
+  --section1-wallet-bottomBG: #27262c;
+}
+
+.darkmode {
+  --section6-bg: rgb(250, 249, 250);
+  --section6-text: rgb(40, 13, 95);
+  --section5-gradient: linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%);
+  --section5-transparent-bg: rgba(255, 255, 255, 0.6);
+  --section4-bg: #f1edf3;
+  --section3-bg: #faf9fa;
+  --section2-bg: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+  --section2-bg-bottomline: #d7cbec;
+  --section2-cards-bg: white;
+  --section2-cards-shadow: rgb(238 234 244);
+  --section1-main-bg: linear-gradient(139.73deg, rgb(230, 253, 255) 0%, rgb(243, 239, 255) 100%);
+  --scrollbar-track: rgb(238 234 244);
+  --scrollbar-thumb: rgb(122, 110, 170);
+  --scrollbar-shadow: rgb(238 234 244);
+  --section1-nav-bg: white;
+  --section1-nav-border: rgb(231, 227, 235);
+  --section1-settings-button: #f5f8f9;
+  --section1-button-bg: #666171;
+  --section1-wallet-bg: linear-gradient(139.73deg, rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%);
+  --section1-wallet-bottomBG: white;
+}
+.darkmode .container_5 {
+  border: none !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   list-style-type: none;
   text-decoration: none;
+}
+
+#darkLogo {
+  display: none;
 }
 
 body > #Section_1 {
@@ -117,8 +170,8 @@ body > #Section_1 > header > nav {
   align-items: center;
   width: 100%;
   height: 56px;
-  background-color: rgb(39, 38, 44);
-  border-bottom: 1px solid rgb(56, 50, 65);
+  background-color: var(--section1-nav-bg);
+  border-bottom: 1px solid var(--section1-nav-border);
   transform: translate3d(0px, 0px, 0px);
   padding-left: 16px;
   padding-right: 16px;
@@ -166,8 +219,8 @@ body > #Section_1 > header > nav > .nav-left > .nav-left-inner-links > .nav-left
   border-radius: 16px;
 }
 body > #Section_1 > header > nav > .nav-left > .nav-left-inner-links > .nav-left-inner-links-outer-block > .nav-left-inner-links-outer-block-link-dropdown {
-  background-color: rgb(39, 38, 44);
-  border: 1px solid rgb(56, 50, 65);
+  background-color: var(--section1-nav-bg);
+  border: 1px solid var(--section1-nav-border);
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
@@ -262,7 +315,7 @@ body > #Section_1 > header > nav > .nav-right > .nav-right-languages-outer > .na
   left: -150%;
   top: 40px;
   bottom: auto;
-  background-color: rgb(39, 38, 44);
+  background-color: var(--section1-nav-bg);
   box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
   padding: 16px;
   z-index: 10;
@@ -289,9 +342,8 @@ body > #Section_1 > header > nav > .nav-right > .nav-right-languages-outer > .na
   height: 48px;
   padding: 0px 24px;
   background-color: transparent;
-  color: rgb(31, 199, 212);
   box-shadow: none;
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   padding: 0px 8px;
   border-radius: 8px;
 }
@@ -355,7 +407,7 @@ body > #Section_1 > header > nav > .nav-right > button > div.mobile {
   display: none;
 }
 body > #Section_1 > main {
-  background: radial-gradient(103.12% 50% at 50% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+  background: var(--section1-main-bg);
   padding: 3rem 0 4.375rem 0;
   display: flex;
   flex-direction: column;
@@ -519,7 +571,7 @@ body > #Section_1 > main > section > .div-moon > div > h2:first-of-type {
 }
 body > #Section_1 > main > section > .div-moon > div > h2:last-of-type {
   line-height: 1.1;
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -784,7 +836,7 @@ body > .nav-fixed-small {
 
 .iZtpYs {
   align-items: center;
-  background: transparent;
+  background: var(--section1-wallet-bg);
   border-bottom: 1px solid rgb(56, 50, 65);
   display: flex;
   padding: 12px 24px;
@@ -792,7 +844,7 @@ body > .nav-fixed-small {
 
 @media screen and (min-width: 852px) {
   .iZtpYs {
-    background: linear-gradient(139.73deg, rgb(49, 61, 92) 0%, rgb(61, 42, 84) 100%);
+    background: var(--section1-wallet-bg);
   }
 }
 .cAfWiC {
@@ -846,6 +898,14 @@ body > .nav-fixed-small {
   background-color: transparent;
   color: rgb(31, 199, 212);
   box-shadow: none;
+}
+
+.fxrqCO {
+  color: var(--section6-text) !important;
+}
+
+.cLxufJ {
+  background: var(--section1-wallet-bottomBG);
 }
 
 .jodCDD {
@@ -1000,7 +1060,7 @@ a {
 }
 
 .fHiGVA {
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   font-weight: 400;
   line-height: 1.5;
   font-size: 14px;
@@ -1215,7 +1275,7 @@ h2 {
 }
 
 .bXycjW {
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -1241,7 +1301,7 @@ h2 {
 
 .enaAag {
   align-items: center;
-  background-color: rgb(55, 47, 71);
+  background-color: var(--section1-button-bg);
   border-radius: 24px;
   box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
   cursor: pointer;
@@ -1271,7 +1331,7 @@ h2 {
 }
 
 .bqyozG {
-  background-color: rgb(39, 38, 44);
+  background-color: var(--section1-nav-bg);
   border-radius: 50%;
   cursor: pointer;
   height: 26px;
@@ -1345,7 +1405,7 @@ h2 {
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
   height: 32px;
   padding: 0px 16px;
-  background-color: rgb(53, 53, 71);
+  background-color: var(--section1-settings-button);
   box-shadow: none;
   color: rgb(31, 199, 212);
   margin-top: 4px;
@@ -1370,7 +1430,7 @@ h2 {
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
   height: 32px;
   padding: 0px 16px;
-  background-color: rgb(53, 53, 71);
+  background-color: var(--section1-settings-button);
   box-shadow: none;
   color: rgb(31, 199, 212);
   margin-right: 4px;
@@ -1418,22 +1478,35 @@ h2 {
   padding: 0px;
 }
 
+#waveBGdark {
+  position: absolute;
+  bottom: 99%;
+  width: 100vw;
+}
+
+#waveBGlight {
+  position: absolute;
+  bottom: 99%;
+  width: 100vw;
+  display: none;
+}
+
 #gradient-section2-3 {
   width: 100vw;
   height: 80px;
-  background: linear-gradient(to bottom left, rgb(32, 19, 53) 49%, rgb(8, 6, 11) 51%);
+  background: linear-gradient(to bottom left, var(--section2-bg-bottomline) 49%, var(--section3-bg) 51%);
   margin: -2px 0 -2px 0;
 }
 
 #gradient-section3-4 {
   width: 100vw;
   height: 80px;
-  background: linear-gradient(to bottom right, rgb(8, 6, 11) 49%, #3b374b 51%);
+  background: linear-gradient(to bottom right, var(--section3-bg) 49%, var(--section4-bg) 51%);
   margin: -2px 0 -2px 0;
 }
 
 .entire_section {
-  background-image: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
+  background-image: var(--section2-bg);
   width: 100vw;
   height: 793px;
   justify-content: space-evenly;
@@ -1450,7 +1523,7 @@ h2 {
   font-weight: 600; /*fontheavyWeight*/
   line-height: 1.1;
   font-size: 40px;
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   font-family: "Kanit", sans-serif; /*fontFamily*/
 }
 .entire_section .header2 {
@@ -1476,9 +1549,9 @@ h2 {
   align-content: center;
 }
 .entire_section .cards .firstcard, .entire_section .cards .thirdcard, .entire_section .cards .secondcard {
-  background: #27262c; /*mainBlack?*/
+  background: var(--section2-cards-bg); /*mainBlack?*/
   border-radius: 24px;
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
   overflow: hidden;
   position: relative;
   padding: 24px;
@@ -1488,7 +1561,7 @@ h2 {
   height: 280px;
   border: 0px solid;
   border-color: rgb(55, 47, 71);
-  box-shadow: 0px -5px 1px 0px inset rgb(56, 50, 65);
+  box-shadow: 0px -5px 1px 0px inset var(--section2-cards-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1583,7 +1656,7 @@ body {
 
 /*------------------------------------------------------Sezione 3--------------------------------------------------------------*/
 .Section_3 {
-  background-color: rgb(8, 6, 11);
+  background-color: var(--section3-bg);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1611,7 +1684,7 @@ body {
   font-family: "Kanit";
   font-weight: 600;
   font-size: 2.5rem;
-  color: rgb(244, 238, 255);
+  color: var(--section6-text);
 }
 .Section_3 .Image-Text_3 .text_3 h1 span {
   color: #9a6aff;
@@ -1702,7 +1775,7 @@ body {
 /*-----------------------------------------------------------------------------------Sezione 5---------------------------------------------------------------------------------*/
 .Section_5 {
   width: 100%;
-  background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+  background: var(--section5-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1836,7 +1909,7 @@ body {
   z-index: 1;
   width: 100%;
   max-width: 55rem;
-  background-color: rgba(8, 6, 11, 0.6);
+  background-color: var(--section5-transparent-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2055,7 +2128,7 @@ body {
 }
 
 .sectionSix {
-  background-color: #3b374b;
+  background-color: var(--section4-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2116,7 +2189,7 @@ body {
 }
 .text #title-par {
   font-size: 2.5rem;
-  color: #f4eeff;
+  color: var(--section6-text);
   margin: 0px 0px 24px;
   font-weight: 600;
 }
@@ -2173,7 +2246,7 @@ body {
   align-items: center;
   justify-content: start;
   margin-top: 0.625rem;
-  color: #f4eeff;
+  color: var(--section6-text);
 }
 .title-res-data span {
   color: #9a6aff;
@@ -2190,7 +2263,7 @@ body {
   cursor: pointer;
   border: none;
   fill: #b8add2;
-  background-color: #3b374b;
+  background-color: transparent;
 }
 .title-res-data button:hover {
   fill: #8a7da8;
@@ -2225,7 +2298,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .res-data #sub-res-data p {
-  color: #f4eeff;
+  color: var(--section6-text);
   margin-bottom: 0.3125rem;
 }
 .res-data #sub-res-data p:nth-last-child(1) {
@@ -2244,7 +2317,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .res-data #subtitle-res-data p {
-  color: #f4eeff;
+  color: var(--section6-text);
   margin-bottom: 0.3125rem;
 }
 .res-data #subtitle-res-data p:nth-last-child(1) {
@@ -2270,7 +2343,7 @@ body {
   width: max-content;
 }
 #res-data-hidden #sub-res-data-hidden p {
-  color: #f4eeff;
+  color: var(--section6-text);
   margin-bottom: 0.3125rem;
 }
 #res-data-hidden #sub-res-data-hidden p:nth-last-child(1) {
@@ -2288,7 +2361,7 @@ body {
   width: 100%;
 }
 #res-data-hidden #subtitle-res-data-hidden p {
-  color: #f4eeff;
+  color: var(--section6-text);
   margin-bottom: 0.3125rem;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -2429,7 +2502,7 @@ html {
 .sezione6-wrapper {
   position: relative;
   z-index: 50;
-  background-color: black;
+  background-color: var(--section6-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2441,12 +2514,13 @@ html {
 }
 
 .sezione6 {
-  background-color: black;
+  background-color: var(--section6-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-top: -1px;
   height: 100%;
   max-height: 750px;
   width: 100%;
@@ -2463,7 +2537,7 @@ html {
 }
 .blocco1flex .textblocco1 {
   width: 35%;
-  color: #f4eeff;
+  color: var(--section6-text);
   font-size: 2rem;
 }
 .blocco1flex .textblocco1 span {
@@ -2596,7 +2670,7 @@ html {
 }
 .blocco2grid p {
   font-size: 24px;
-  color: #f4eeff;
+  color: var(--section6-text);
   font-weight: 800;
 }
 .blocco2grid h5 {
@@ -2702,13 +2776,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(184, 173, 210);
+  background: var(--scrollbar-thumb);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: rgb(55, 47, 71) 0px 0px 5px inset;
-  background: #27262c;
+  box-shadow: var(--scrollbar-shadow) 0px 0px 5px inset;
+  background: var(--scrollbar-track);
 }
 
 body .space {

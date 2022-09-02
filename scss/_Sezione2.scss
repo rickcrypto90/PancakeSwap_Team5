@@ -3,27 +3,35 @@
 @use "./functionModule"as function;
 @use "./inputModule"as input;
 @use "./buttons"as buttons;
+@use './darkMode' as darkmode;
 
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
+#waveBGdark{
+    position: absolute; bottom: 99% ; width: 100vw;
+}
+#waveBGlight{
+    position: absolute; bottom: 99% ; width: 100vw;
+    display: none;
+}
 #gradient-section2-3{
 width: 100vw;
 height: 80px;
-background: linear-gradient(to bottom left,rgb(32, 19, 53) 49%, rgb(8, 6, 11) 51% );
+background: linear-gradient(to bottom left,darkmode.$section2-bg-bottomline 49%, darkmode.$section3-bg 51% );
 margin: -2px 0 -2px 0;
 }
 #gradient-section3-4{
     width: 100vw;
     height: 80px;
-    background: linear-gradient(to bottom right, rgb(8, 6, 11) 49% , #3b374b 51% );
+    background: linear-gradient(to bottom right, darkmode.$section3-bg 49% , darkmode.$section4-bg 51% );
     margin: -2px 0 -2px 0;
 
 }
 .entire_section {
-    background-image: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
+    background-image: darkmode.$section2-bg;
     width: 100vw;
     height: 793px;
     justify-content: space-evenly;    
@@ -41,7 +49,7 @@ margin: -2px 0 -2px 0;
         font-weight: font.$fontHeavyWeight; /*fontheavyWeight*/
         line-height: 1.1;
         font-size: 40px;
-        color: rgb(244, 238, 255);
+        color: darkmode.$section6-text;
         font-family: font.$fontFamily, sans-serif; /*fontFamily*/
     }
 
@@ -75,9 +83,9 @@ margin: -2px 0 -2px 0;
         align-content: center;
     
         .firstcard {
-            background: color.$mainBlack; /*mainBlack?*/
+            background: darkmode.$section2-cards-bg; /*mainBlack?*/
             border-radius: 24px;
-            color: rgb(244, 238, 255);
+            color: darkmode.$section6-text;
             overflow: hidden;
             position: relative;
             padding: 24px;
@@ -87,7 +95,7 @@ margin: -2px 0 -2px 0;
             height: 280px;
             border: 0px solid;
             border-color:rgb(55 47 71); 
-            box-shadow: 0px -5px 1px 0px inset rgb(56, 50, 65);
+            box-shadow: 0px -5px 1px 0px inset darkmode.$section2-cards-shadow;
             display: flex;
             flex-direction: column;
             justify-content: space-between;

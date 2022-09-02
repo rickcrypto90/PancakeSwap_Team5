@@ -10,6 +10,7 @@
 
 @use './cards' as card;
 
+@use './darkMode' as darkmode;
 * {
   padding: 0;
   margin: 0;
@@ -23,7 +24,7 @@ body {
 }
 
 .sectionSix {
-  background-color: #3b374b;
+  background-color: darkmode.$section4-bg;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +90,7 @@ body {
 
   #title-par {
     font-size: function.convertpx(40px);
-    color: #f4eeff;
+    color: darkmode.$section6-text;
     margin: 0px 0px 24px;
     font-weight: font.$fontHeavyWeight;
     span {
@@ -155,7 +156,7 @@ body {
   align-items: center;
   justify-content: start;
   margin-top: function.convertpx(10px);
-  color: #f4eeff;
+  color: darkmode.$section6-text;
 
   span {
     color: color.$mainPurple;
@@ -174,7 +175,7 @@ body {
     cursor: pointer;
     border: none;
     fill: #b8add2;
-    background-color: #3b374b;
+    background-color: transparent;
   }
 
   button:hover {
@@ -211,7 +212,7 @@ body {
     }
 
     p {
-      color: #f4eeff;
+      color: darkmode.$section6-text;
       margin-bottom: function.convertpx(5px);
     }
     p:nth-last-child(1) {
@@ -230,7 +231,7 @@ body {
       margin-bottom: function.convertpx(8px);
     }
     p {
-      color: #f4eeff;
+      color: darkmode.$section6-text;
       margin-bottom: function.convertpx(5px);
     }
     p:nth-last-child(1) {
@@ -262,7 +263,7 @@ body {
     }
 
     p {
-      color: #f4eeff;
+      color: darkmode.$section6-text;;
       margin-bottom: function.convertpx(5px);
     }
     p:nth-last-child(1) {
@@ -281,8 +282,8 @@ body {
       width: 100%;
     }
     p {
-      color: #f4eeff;
-      margin-bottom: function.convertpx(5px);
+      color: darkmode.$section6-text;
+     margin-bottom: function.convertpx(5px);
       width: max-content;
     }
     p:nth-last-child(1) {

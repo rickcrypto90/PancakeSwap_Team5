@@ -112,6 +112,7 @@ body {
   display: flex;
   align-items: center;
 
+
   button {
     margin-right: function.convertpx(10px);
     align-items: center;
@@ -126,6 +127,7 @@ body {
     background-color: color.$buttonBlue;
     color: #f4eeff;
     margin-right: function.convertpx(8px);
+    border: none;
   }
 
   button:hover {

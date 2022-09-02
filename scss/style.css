@@ -2137,6 +2137,7 @@ body {
   background-color: #1FC7d4;
   color: #f4eeff;
   margin-right: 0.5rem;
+  border: none;
 }
 .btn-links button:hover {
   background-color: #199ea7;

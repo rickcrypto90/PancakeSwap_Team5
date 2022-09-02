@@ -685,35 +685,36 @@ body {
     .desktop {
         display: none !important;
     }
-    body > section.nav-fixed-small {
+    body 
+    //section.nav-fixed-small {
 
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        z-index: 1000;
-        align-items: center;
-        width: 100vw;
-        height: 56px;
-        background-color: rgb(39, 38, 44);
-        border-bottom: 1px solid rgb(56, 50, 65);
-        transform: translate3d(0px, 0px, 0px);
-        padding-left: 16px;
-        padding-right: 16px;
-        justify-content: space-around;
-        visibility: visible;
+    //     display: flex;
+    //     position: fixed;
+    //     bottom: 0;
+    //     z-index: 1000;
+    //     align-items: center;
+    //     width: 100vw;
+    //     height: 56px;
+    //     background-color: rgb(39, 38, 44);
+    //     border-bottom: 1px solid rgb(56, 50, 65);
+    //     transform: translate3d(0px, 0px, 0px);
+    //     padding-left: 16px;
+    //     padding-right: 16px;
+    //     justify-content: space-around;
+    //     visibility: visible;
 
-        &>button {
-            border: none;
+    //     &>button {
+    //         border: none;
             
-            background-color: transparent;
-            color: rgb(184, 173, 210);
-            cursor: pointer;
+    //         background-color: transparent;
+    //         color: rgb(184, 173, 210);
+    //         cursor: pointer;
 
-            & svg {
-                fill: rgb(184, 173, 210);
-            }
-        }
-    }
+    //         & svg {
+    //             fill: rgb(184, 173, 210);
+    //         }
+    //     }
+    // }
 
 
     .close-desktop {
@@ -743,6 +744,34 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+    section.nav-fixed-small {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        align-items: center;
+        width: 100vw;
+        height: 56px;
+        background-color: rgb(39, 38, 44);
+        border-bottom: 1px solid rgb(56, 50, 65);
+        transform: translate3d(0px, 0px, 0px);
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: space-around;
+        visibility: visible;
+
+        &>button {
+            border: none;
+            
+            background-color: transparent;
+            color: rgb(184, 173, 210);
+            cursor: pointer;
+
+            & svg {
+                fill: rgb(184, 173, 210);
+            }
+        }
+    }
     .settings{
         height: 100% !important;
         

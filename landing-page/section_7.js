@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded",async()=>{
     numero = Number(price).toFixed(3);
     let selettore = document.querySelector("div.bottomFooterRight > div.leftSide > a > div");
     selettore.textContent = `$${numero}`;
-    }, 1000);
+    }, 5000);
 })
 
 document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('click', ()=>{

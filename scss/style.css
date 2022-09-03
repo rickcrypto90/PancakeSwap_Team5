@@ -3064,6 +3064,7 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.4s, opacity 0.4s;
+  border: 1px solid rgb(56, 50, 65);
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button {
   cursor: pointer;
@@ -3167,6 +3168,10 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
     height: 55px;
     display: block !important;
     background-color: #27262c;
+  }
+  div.languages {
+    top: 10px !important;
+    left: 60px !important;
   }
   section.sectionSeven div.sectionSeven-centralDiv h2 {
     font-size: 1.875rem !important;

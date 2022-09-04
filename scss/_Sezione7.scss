@@ -163,6 +163,7 @@ body{
 
     footer{ //start footer handling
         overflow-x: hidden;
+        overflow-y: hidden;
         background-color: color.$mainBlack;
         display: flex;
         justify-content: center;
@@ -455,11 +456,11 @@ body{
 }
 
 @media screen and (max-width: 575px){
-    .space{
-        height: 55px;
-        display: block !important;
-        background-color: #27262c;
-    }
+    // .space{
+    //     height: 55px;
+    //     display: block !important;
+    //     background-color: #27262c;
+    // }
     div.languages{
         top: 10px !important;
         left: 60px !important;
@@ -477,6 +478,7 @@ body{
         }
     }
     footer{
+        margin-bottom: 54px !important;
         height: function.convertpx(950px) !important;
       >div.footerContainer{
         div.topFooter{

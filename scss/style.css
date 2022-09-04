@@ -2511,6 +2511,8 @@ html {
   height: 100%;
   max-height: 750px;
   width: 100%;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 
 .sezione6 {
@@ -2520,9 +2522,9 @@ html {
   align-items: center;
   justify-content: center;
   margin: auto;
-  margin-top: -1px;
-  height: 100%;
-  max-height: 750px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   max-width: 55rem;
 }
@@ -2690,7 +2692,7 @@ html {
   }
   .sezione6 {
     padding: 20px;
-    padding-top: 100px !important;
+    padding-top: 30px !important;
     margin-right: 30px !important;
     gap: 60px;
   }
@@ -2906,6 +2908,7 @@ body section.sectionSeven div.sectionSeven-centralDiv button a {
 }
 body footer {
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #27262c;
   display: flex;
   justify-content: center;
@@ -3167,11 +3170,6 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
   }
 }
 @media screen and (max-width: 575px) {
-  .space {
-    height: 55px;
-    display: block !important;
-    background-color: #27262c;
-  }
   div.languages {
     top: 10px !important;
     left: 60px !important;
@@ -3183,6 +3181,7 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
     font-size: 0.875rem !important;
   }
   footer {
+    margin-bottom: 54px !important;
     height: 59.375rem !important;
   }
   footer > div.footerContainer div.topFooter {

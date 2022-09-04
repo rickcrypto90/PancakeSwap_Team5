@@ -349,6 +349,7 @@ body{
                                     visibility: hidden;
                                     opacity: 0;
                                     transition: visibility 0.4s, opacity 0.4s;
+                                    border: 1px solid rgb(56, 50, 65);
                                     button{
                                         cursor: pointer;
                                         display: flex;
@@ -458,6 +459,10 @@ body{
         height: 55px;
         display: block !important;
         background-color: #27262c;
+    }
+    div.languages{
+        top: 10px !important;
+        left: 60px !important;
     }
     section{
         &.sectionSeven{

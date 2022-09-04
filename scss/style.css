@@ -552,7 +552,7 @@ body > #Section_1 > main > section > .div-moon > aside > img:nth-of-type(n + 2) 
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.1;
   z-index: 3;
 }
 body > #Section_1 > main > section > .div-moon > div {
@@ -3067,6 +3067,7 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightS
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.4s, opacity 0.4s;
+  border: 1px solid rgb(56, 50, 65);
 }
 body footer div.footerContainer div.bottomFooter div.bottomFooterLeft div.rightSide div.languages button {
   cursor: pointer;
@@ -3170,6 +3171,10 @@ body footer div.footerContainer div.bottomFooter div.bottomFooterRight div.right
     height: 55px;
     display: block !important;
     background-color: #27262c;
+  }
+  div.languages {
+    top: 10px !important;
+    left: 60px !important;
   }
   section.sectionSeven div.sectionSeven-centralDiv h2 {
     font-size: 1.875rem !important;

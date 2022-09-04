@@ -5,13 +5,13 @@ document.querySelectorAll(".star").forEach((element, index) => {
   gsap.timeline({
     repeat: -1,
     yoyo: true,
-    delay: index / 2
+    delay: index / 2,
   })
     .to(
       element,
       {
         opacity: 1,
-        duration: 1
+        duration: 2
       }
     )
 })

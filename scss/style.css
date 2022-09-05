@@ -1928,7 +1928,7 @@ body {
   font-family: "Kanit";
   font-weight: 600;
   font-size: 2.5rem;
-  color: white;
+  color: var(--section6-text);
   margin-bottom: 1rem;
 }
 .Section_5 .container_5 .text_5 h2 span {
@@ -2112,6 +2112,7 @@ body {
   }
   .Section_5 .container_5 .cards_5 .card2_5 {
     transform: rotate(0);
+    min-width: 14.4375rem;
   }
 }
 /*---------------------------------------------------------------------------------FINE Sezione 3------------------------------------------------------------------------------*/

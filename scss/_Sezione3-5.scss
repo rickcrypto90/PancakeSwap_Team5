@@ -274,7 +274,7 @@ body{
                 font-family: font.$fontFamily;
                 font-weight: font.$fontHeavyWeight;
                 font-size: function.convertpx(40px);
-                color:white;
+                color: darkmode.$section6-text;
                 margin-bottom: 1rem;
                 span {
                     color: color.$mainPurple;
@@ -437,6 +437,7 @@ body{
                 }
                 .card2_5 {
                     transform: rotate(0);
+                    min-width: function.convertpx(231px);
                 }
             }
         }

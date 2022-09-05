@@ -1,0 +1,72 @@
+
+@use './colorsModule' as color;
+:root{
+    --section6-bg: black;
+    --section6-text: #f4eeff;
+    --section5-gradient: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+    --section5-transparent-bg: rgba(8, 6, 11, 0.6);
+    --section4-bg: #3b374b;
+    --section3-bg: rgb(8, 6, 11);
+    --section2-bg: linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%);
+    --section2-bg-bottomline: rgb(32, 19, 53);
+    --section2-cards-bg: rgb(39, 38, 44);
+    --section2-cards-shadow: rgb(56, 50, 65);
+    --section1-main-bg: radial-gradient(103.12% 50% at 50% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+    --scrollbar-track: rgb(39, 38, 44);
+    --scrollbar-thumb: rgb(184, 173, 210);
+    --scrollbar-shadow: rgb(55 47 71);
+    --section1-nav-bg:  rgb(39, 38, 44);
+    --section1-nav-border: rgb(56, 50, 65);
+    --section1-settings-button: rgb(53, 53, 71);
+    --section1-button-bg: #372f47;
+    --section1-wallet-bg: linear-gradient(139.73deg, rgb(49, 61, 92) 0%, rgb(61, 42, 84) 100%);
+    --section1-wallet-bottomBG: #27262c;
+}
+
+
+$section6-bg: #{var(--section6-bg)};
+$section6-text: #{var(--section6-text)};
+$section5-gradient: #{var(--section5-gradient)};
+$section5-transparent-bg: #{var(--section5-transparent-bg)};
+$section4-bg: #{var(--section4-bg)};
+$section3-bg: #{var(--section3-bg)};
+$section2-bg: #{var(--section2-bg)};
+$section2-bg-bottomline: #{var(--section2-bg-bottomline)};
+$section2-cards-bg: #{var(--section2-cards-bg)};
+$section2-cards-shadow: #{var(--section2-cards-shadow)};
+$section1-main-bg: #{var(--section1-main-bg)};
+$scrollbar-track: #{var(--scrollbar-track)};
+$scrollbar-thumb: #{var(--scrollbar-thumb)};
+$scrollbar-shadow: #{var(--scrollbar-shadow)};
+$section1-nav-bg: #{var(--section1-nav-bg)};
+$section1-nav-border: #{var(--section1-nav-border)};
+$section1-settings-button: #{var(--section1-settings-button)};
+$section1-button-bg: #{var(--section1-button-bg)};
+$section1-wallet-bg: #{var(--section1-wallet-bg)};
+$section1-wallet-bottomBG: #{var(--section1-wallet-bottomBG)};
+
+.darkmode{
+--section6-bg: rgb(250, 249, 250);
+--section6-text: rgb(40, 13, 95);
+--section5-gradient: linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%);
+--section5-transparent-bg: rgba(255, 255, 255, 0.6);
+        .container_5{
+            border: none !important;
+        }
+--section4-bg: #f1edf3;
+--section3-bg: #faf9fa;
+--section2-bg: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+--section2-bg-bottomline: #d7cbec;
+--section2-cards-bg: white;
+--section2-cards-shadow: rgb(238 234 244);
+--section1-main-bg: linear-gradient(139.73deg, rgb(230, 253, 255) 0%, rgb(243, 239, 255) 100%);
+--scrollbar-track: rgb(238 234 244);
+--scrollbar-thumb: rgb(122, 110, 170);
+--scrollbar-shadow: rgb(238 234 244);
+--section1-nav-bg: white;
+--section1-nav-border: rgb(231, 227, 235);
+--section1-settings-button: #f5f8f9;
+--section1-button-bg: #666171;
+--section1-wallet-bg: linear-gradient(139.73deg, rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%);
+--section1-wallet-bottomBG: white;
+}

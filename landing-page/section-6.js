@@ -1,10 +1,10 @@
 //animazione
-let tl1 = gsap.timeline({ repeat: -1, yoyo: true });
 
-let animazione = tl1.to("#main-img", { y: 25, x: 18, duration: 1.5, stagger: 0.2, ease: "power0.inOut" })
-    .to("#top-right", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
-    .to("#top-left", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
-    .to("#bottom-right", { y: 35, x: 25, duration: 1.5, stagger: 0.2, ease: "power0.inOut" }, "-=1.5")
+
+gsap.to("#main-img", { repeat: -1, yoyo: true, y: 7, x: 4, duration: 1.5, ease: "power1.inOut" })
+gsap.to("#top-left", { repeat: -1, yoyo: true, y: 10, duration: 1.5, ease: "power1.inOut" })
+gsap.to("#top-right", { delay:.1,repeat: -1, yoyo: true, y: 10,x: 4, duration: 1.5, ease: "power1.inOut" })
+gsap.to("#bottom-right", { delay:.2,repeat: -1, yoyo: true, y: 10,x: 4, duration: 1.5, ease: "power1.inOut" })
 
 //fetching 
 async function getApi() {

@@ -10,6 +10,8 @@
 
 @use './cards' as card;
 
+@use './darkMode' as darkmode;
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +23,12 @@
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(184, 173, 210);
+    background: darkmode.$scrollbar-thumb;
     border-radius: 8px;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: rgb(55 47 71) 0px 0px 5px inset;
-    background: color.$mainBlack;
+    box-shadow: darkmode.$scrollbar-shadow 0px 0px 5px inset;
+    background: darkmode.$scrollbar-track;
 }
 
 body{
@@ -161,6 +163,7 @@ body{
 
     footer{ //start footer handling
         overflow-x: hidden;
+        overflow-y: hidden;
         background-color: color.$mainBlack;
         display: flex;
         justify-content: center;
@@ -347,6 +350,7 @@ body{
                                     visibility: hidden;
                                     opacity: 0;
                                     transition: visibility 0.4s, opacity 0.4s;
+                                    border: 1px solid rgb(56, 50, 65);
                                     button{
                                         cursor: pointer;
                                         display: flex;
@@ -446,13 +450,20 @@ body{
             display: none;
         }
     }
+    footer{
+        // padding-bottom: 56px !important;
+    }
 }
 
 @media screen and (max-width: 575px){
-    .space{
-        height: 55px;
-        display: block !important;
-        background-color: #27262c;
+    // .space{
+    //     height: 55px;
+    //     display: block !important;
+    //     background-color: #27262c;
+    // }
+    div.languages{
+        top: 10px !important;
+        left: 60px !important;
     }
     section{
         &.sectionSeven{
@@ -467,6 +478,7 @@ body{
         }
     }
     footer{
+        margin-bottom: 54px !important;
         height: function.convertpx(950px) !important;
       >div.footerContainer{
         div.topFooter{

@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded",async()=>{
     numero = Number(price).toFixed(3);
     let selettore = document.querySelector("div.bottomFooterRight > div.leftSide > a > div");
     selettore.textContent = `$${numero}`;
-    }, 1000);
+    }, 5000);
 })
 
 document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('click', ()=>{
@@ -67,5 +67,22 @@ document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('
          document.querySelector('div.bottomFooterLeft > div.leftSide div.nightMode img').style.filter='invert(100%) sepia(5%) saturate(0%) hue-rotate(45deg) brightness(107%) contrast(105%)'
          document.querySelector('div.bottomFooterLeft > div.leftSide div.lightMode img').style.filter='invert(65%) sepia(67%) saturate(496%) hue-rotate(347deg) brightness(103%) contrast(103%)'
     }
+})
+
+document.querySelector('div.bottomFooterLeft > div.leftSide').addEventListener('click',()=>{
+if(document.querySelector('body').classList.contains('darkmode')){
+    document.querySelector('body').classList.remove('darkmode');
+    document.querySelector('#waveBGdark').style.display = 'block';
+    document.querySelector('#waveBGlight').style.display = 'none';
+    document.querySelector('#whiteLogo').style.display = 'block';
+    document.querySelector('#darkLogo').style.display = 'none';
+}
+else{
+    document.querySelector('body').classList.add('darkmode');
+    document.querySelector('#waveBGdark').style.display = 'none';
+    document.querySelector('#waveBGlight').style.display = 'block';
+    document.querySelector('#whiteLogo').style.display = 'none';
+    document.querySelector('#darkLogo').style.display = 'block';
+}
 })
 // FINE JS FOOTER - FRANCESCO

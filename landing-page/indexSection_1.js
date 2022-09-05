@@ -391,6 +391,20 @@ document.querySelector("div.nav-right-icon > a").addEventListener('mouseover', (
 // ANIMATION HERO
 let timers = document.querySelectorAll(".hero-timer");
 let check = 0;
+timers.forEach.addEventListener("click", () => {
+  timers[check].style.display = "none"
+  if (check === 1) {
+    timers[check].style.display = "none"
+    gsap.fromTo(timers[check - 1], { opacity: 0 }, { opacity: 1, duration: .1 })
+    timers[check - 1].style.display = "flex"
+    check--;
+  }
+  else {
+    gsap.fromTo(timers[check + 1], { opacity: 0 }, { opacity: 1, duration: .1 });
+    timers[check + 1].style.display = "flex"
+    check++
+  }
+})
 setInterval(() => {
   timers[check].style.display = "none"
   if (check === 1) {
@@ -444,5 +458,3 @@ else{
   document.querySelector('#darkLogo').style.display = 'block';
 }
 })}
-
-

@@ -4,12 +4,13 @@
 
 @use './functionModule' as function;
 
-@use 'inputModule' as input;
+@use './inputModule' as input;
 
 @use './buttons' as buttons;
 
-@use 'cards' as card;
+@use './_cards' as card;
 
+@use './darkMode' as darkmode;
 
 @mixin DivColorShow($color) {
     min-height: function.convertpx(40px);
@@ -24,8 +25,8 @@
 
 
 .card {
-    @include card;
-    @include cardNFT;
+    @include card.card;
+    @include card.cardNFT;
 }
 
 * {
@@ -420,9 +421,9 @@ input:invalid,
         display: flex;
         flex-flow: column no;
         gap: function.convertpx(10px);
-        .nftcard { @include cardNewestArrivals;}
+        .nftcard { @include card.cardNewestArrivals;}
         .swap {
-            @include card;
+            @include card.card;
             width: function.convertpx(328px);
             height: function.convertpx(518px);
             display: flex;
@@ -468,7 +469,7 @@ input:invalid,
                 flex-flow: column nowrap;
                 align-items: center;
             >button {
-                @include card;
+                @include card.card;
                 width: inherit;
                 height: inherit;
                border: none;
@@ -534,7 +535,7 @@ input:invalid,
         }
 
         .card {
-            @include cardNFT;
+            @include card.cardNFT;
             background-image: url(https://pancakeswap.finance/_next/image?url=https%3A%2F%2Fstatic-nft.pancakeswap.com%2Fmainnet%2F0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07%2Fbanner-sm.png&w=750&q=75);
             background-size: contain;
             background-repeat: no-repeat;

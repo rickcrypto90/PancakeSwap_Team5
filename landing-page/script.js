@@ -35,6 +35,18 @@ arrows.addEventListener("click", () => {
   }
 });
 
+setInterval(function() {
+  if (title.innerHTML === "Farms") {
+    title.innerHTML = "Syrup Pools";
+    hidden.style.display = "flex";
+    // first.style.display = "none";
+    first.setAttribute("style", "display:none !important");
+  } else if (title.innerHTML === "Syrup Pools") {
+    title.innerHTML = "Farms";
+    hidden.style.display = "none";
+    first.style.display = "flex";
+    hidden.setAttribute("style", "display:none !important");
+  }},6000);
 window.addEventListener("DOMContentLoaded", () => {
   hidden.setAttribute("style", "display:none !important");
 });

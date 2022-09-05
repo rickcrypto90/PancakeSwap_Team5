@@ -1131,6 +1131,7 @@ a {
   align-items: center;
   background: transparent;
   border-bottom: 1px solid rgb(56, 50, 65);
+  background: var(--section1-settings-button);
   display: flex;
   padding: 12px 24px;
 }
@@ -1138,6 +1139,7 @@ a {
 @media screen and (min-width: 852px) {
   .eHwgEU {
     background: linear-gradient(166.77deg, rgb(59, 65, 85) 0%, rgb(58, 48, 69) 100%);
+    background: var(--section1-settings-button);
   }
 }
 .izRJVO {
@@ -1470,6 +1472,41 @@ h2 {
   fill: rgb(184, 173, 210);
   flex-shrink: 0;
   filter: none !important;
+}
+
+.topSide {
+  position: relative;
+  cursor: pointer;
+  background-color: #666171;
+  width: 3.75rem;
+  height: 1.875rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.topSide:hover div.slider {
+  outline: 0.1875rem solid #7050af;
+}
+.topSide div.slider {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background-color: #27262c;
+  position: absolute;
+  transform: translate(50%) scale(0.85);
+  margin: 0%;
+}
+.topSide div {
+  margin-top: 0.1875rem;
+}
+.topSide div.nightMode img {
+  margin-left: 0.125rem;
+  filter: invert(33%) sepia(87%) saturate(483%) hue-rotate(219deg) brightness(87%) contrast(86%);
+}
+.topSide div.lightMode img {
+  margin-left: 0.125rem;
+  filter: invert(12%) sepia(3%) saturate(1947%) hue-rotate(210deg) brightness(94%) contrast(90%);
 }
 
 * {
